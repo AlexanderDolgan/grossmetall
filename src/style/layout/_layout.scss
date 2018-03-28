@@ -1,0 +1,29 @@
+.l-wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.l-content-wrapper {
+	height: 100%;
+	min-height: rem-calc(700px);
+	// overflow: scroll;
+}
+
+.l-sidebar {
+	float: left;
+	width: 100%;
+	min-height: 100%;
+	background-color: rgba(0,0,0,.8);
+	text-align: center;
+}
+
+@media (min-width: $b-medium) {
+	.l-content-wrapper {
+		margin-left: span(1);
+	}
+	
+	.l-sidebar {
+		width:rem-calc(300px);
+	}
+}

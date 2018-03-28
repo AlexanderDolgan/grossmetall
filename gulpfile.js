@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 
 	imagemin = require('gulp-imagemin'),      //Minify PNG, JPEG, GIF and SVG images
-	pngquant = require('imagemin-pngquant'),
+	// pngquant = require('imagemin-pngquant'),
 
 	rigger = require('gulp-rigger'),          //Rigger is a build time include engine for Javascript,
 											  // CSS, CoffeeScript and in general any type of text file
@@ -34,11 +34,10 @@ var path = {
 		fonts: 'build/fonts/',
 		img: 'build/img/',
 		icons: 'src/img/assets/icons/sprites',
-		//html: 'build/',
+		// html: 'build/',
 		pug: 'build/',
 		js: 'build/js/',
-		// css: 'build/style'
-		css: '/Applications/MAMP/htdocs/idysuda/wp-content/themes/idysuda/'
+		css: 'build/style'
 	},
 	//source paths
 	src: {
@@ -67,12 +66,12 @@ var path = {
 //config for the web server
 var config = {
 	server: {
-		baseDir: "/Applications/MAMP/htdocs/idysuda/wp-content/themes/idysuda/"
+		baseDir: "./build"
 	},
 	//tunnel: true,
 	host: 'localhost',
 	port: 8888,
-	logPrefix: "idysuda"
+	logPrefix: "gmet"
 };
 
 
@@ -142,7 +141,7 @@ gulp.task('image:build', function () {
 		.pipe(imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()],
+			// use: [pngquant()],
 			interlaced: true
 		}))
 		.pipe(gulp.dest(path.build.img))
@@ -208,16 +207,16 @@ gulp.task('watch', function () {
 
 });
 
-// gulp.task('webserver', function () {
-// 	browserSync(config);
-// });
-
-gulp.task('webserver', function() {
-	browserSync.init({
-			proxy: "http://localhost:8888/idysuda"
-	});
-	gulp.watch("/Applications/MAMP/htdocs/idysuda/wp-content/themes/idysuda/*.css").on("change", browserSync.reload);
+gulp.task('webserver', function () {
+	browserSync(config);
 });
+
+// gulp.task('webserver', function() {
+// 	browserSync.init({
+// 			proxy: "http://localhost:8888/idysuda"
+// 	});
+// 	gulp.watch("/Applications/MAMP/htdocs/idysuda/wp-content/themes/idysuda/*.css").on("change", browserSync.reload);
+// });
 
 gulp.task('clean', function (cb) {
 	rimraf(path.clean, cb);

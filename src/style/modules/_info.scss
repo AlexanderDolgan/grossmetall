@@ -1,0 +1,64 @@
+.info {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	padding: .5rem;
+	transform: scale(0);
+	opacity: 0;
+	transition: opacity .66s, transform .33s;
+	background-color: $white;
+	overflow-y: scroll;
+}
+
+.info-content {
+	& h1 {
+		display: inline-block;
+		text-transform: uppercase;
+		color: $primary-color;
+		padding: 0;
+	}
+
+	& p {
+		font-size: .9rem;
+	}
+
+	& .wpt-date {
+		display: block;
+		font-size: .8rem;
+		padding: .3rem;
+	}
+
+	& .exerpt {
+		color: $primary-color;
+		text-decoration: underline;
+		font-size: .8rem;
+	}
+}
+
+@media (min-width: $b-medium) {
+	.info {
+		position: relative;
+		float: left;
+		width: span(7);
+		max-width: rem-calc(700px);
+		padding: 3rem;
+	}
+	.info-content {
+		& .wpt-date {
+			float: right;
+			font-size: .8rem;
+			padding-top: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: $b-medium) {
+	.info-content {
+		& h1 {
+			margin: .5rem 0;
+		}
+	}
+}
+

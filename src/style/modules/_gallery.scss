@@ -1,0 +1,52 @@
+// bg slider
+.slider-bg {
+	position: fixed;
+	z-index: -999;
+	width: 100%;
+	height: 100%;
+	background-image: url('img/gallery/interior/3interior.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+//gallery 
+
+#imageGallery {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	& li {
+		display: inline-block;
+		max-width: 50%;
+		padding: .2rem;
+	}
+	& h2 {
+		display: block;
+		cursor: pointer;
+		font-size: .9rem;
+	}
+	& .gal-nav {
+		margin: 0;
+		padding: 0;
+		& li {
+			display: inline-block;
+			margin-right: 1rem;
+		}
+	}
+}
+
+.gallery-box {
+	display: none;
+}
+
+.current {
+	display: block;
+}
+
+@media (min-width: $b-medium) {
+	#imageGallery h2 {
+		font-size: 20px;
+	}
+}

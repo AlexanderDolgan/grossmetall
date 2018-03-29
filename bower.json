@@ -1,0 +1,20 @@
+{
+  "name": "grossmetall",
+  "description": "web site grossmetall",
+  "main": "index.js",
+  "authors": [
+    "Alexander Dolgan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "grossmetall"
+  ],
+  "homepage": "https://github.com/AlexanderDolgan/grossmetall",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

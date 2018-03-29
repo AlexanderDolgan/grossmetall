@@ -1,20 +1,8 @@
-doctype html
-html
-	include ./partials/head
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		title Document
 	body
-		.l-wrapper
-			.slider-bg
-				//- img(src="/img/gallery/id-gallery-4.jpg", alt="bg")
-			.l-content-wrapper
-				include ./partials/sidebar
-
-				//- .info
-				//- 	.info-content
-						//- include ./partials/about
-						//- include ./partials/news
-						//- include ./partials/karaoke
-						//- include ./partials/contacts
-						//- include ./partials/gallery
-
-		script(src="js/main.min.js")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js")

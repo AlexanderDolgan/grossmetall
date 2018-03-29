@@ -1,21 +1,67 @@
-/// Transfers the colors in the `$color-palette` variable into the legacy color variables, such as `$primary-color` and `$secondary-color`.
-@mixin add-brand-colors() {
-  @if map-has-key($brand-palette, primary) {
-    $primary-color: map-get($brand-palette, primary) !global;
+// Store the different functions which could alter colors:
+// 1 Key is shorthand to be used in partials, value is map. 
+// 2-A First item in map (key: function) is the function name, 
+// 2-B Optional second map (key: parameters) is a list of additional values.
+// With these limitations, this function does not support 
+// adjust-color, scale-color & change-color.
+$variations: (
+  light: (
+    function: lighten,
+    parameters: 15%
+  ),
+  dark: (
+    function: darken,
+    parameters: 10%
+  ),
+  fade: (
+    function: rgba,
+    parameters: .7
+  ),
+  gray: (
+    function: grayscale
+  ),
+  shade: (
+    function: mix,
+    parameters: white 80%
+  )
+);
+
+@function color-variation($color, $variation: false) {
+
+  // Correctly set $color variable:
+  @if map-has-key($colors, $color) {
+    // $color is in $colors, set variable = map-value
+    $color: map-get($colors, $color); 
+  } @else {
+    @if type-of($color) != color {
+      // $color is not in $color and $color is not a color
+      @error "Invalid color name: `#{$color}`."; 
+    }
+    // $color is a valid color - use it
   }
-  @if map-has-key($brand-palette, primary) {
-    $primary-transparent-color: map-get($brand-palette, primary-transparent) !global;
+
+  @if $variation {
+    @if not map-has-key($variations, $variation) {
+      // variation is not in $variations
+      @error "Invalid $variation: `#{$variation}`.";
+    } @else {
+      // make it easier to deal with nested map
+      $this-variation: map-get($variations, $variation);
+      // $args = $function, $color
+      $args: join(map-get($this-variation, function), $color);
+      @if map-get($this-variation, parameters) {
+        // $args = $function, $colors, $parameters
+        $args: join($args, map-get($this-variation, parameters));
+      }
+      //@return $args;
+      @return call($args...);
+    }
   }
-  @if map-has-key($brand-palette, secondary) {
-    $secondary-color: map-get($brand-palette, secondary) !global;
-  }
-  @if map-has-key($brand-palette, success) {
-    $success-color: map-get($brand-palette, success) !global;
-  }
-  @if map-has-key($brand-palette, warning) {
-    $warning-color: map-get($brand-palette, warning) !global;
-  }
-  @if map-has-key($brand-palette, alert) {
-    $alert-color: map-get($brand-palette, alert) !global;
-  }
+  // no $variation, just return $color
+  @return $color;
+}
+
+// Alias function to make typing easier:
+@function cv($color, $variation:false) {
+  @return color-variation($color, $variation);
 }

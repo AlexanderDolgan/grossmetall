@@ -9,28 +9,17 @@ $font-smooth: antialiased;
 
 //Colors
 $colors: (
-        primary: hsl(0,0,0),
-        secondary: #683531,
-        success: #3ADB76,
+        primary: hsl(128,100,80),
+        secondary: hsl(233,100,80),
+        third: hsl(309,100,80),
         warning: #FFAE00,
         alert: #EC5840,
-        white: #fff
+        white: #fff,
+        black: #4A4A4A
 );
 
-$third-color: #cc3333; // light red
-$fourth-color: #F7E8C3; //bege
-$fifth-color: #FCFAED; ///light bege
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #4A4A4A;
-$dark-black: #1f1f1f;
-
-
-$body-background: $white;
-$body-font-color: $black;
-
-@include add-brand-colors;
+$body-background: cv(white);
+$body-font-color: cv(primary);
 
 $base-spacing: 1em;
 

@@ -1,29 +1,24 @@
 /*
-Theme Name: idysuda
+Theme Name: grossmetall
 Author: Alexander Dolgan
 Author URI:
 Version: 1.0
 */
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
-
-
-// @import "../../bower_components/juice/dist/juice";
-
 //settings-var
 @import "util/settings";
+@import "util/mixin";
 
 //base
 @import "base/base";
 
 //layout
 //susy and breakpoints
-@import "layout/index";
+// @import "layout/index";
 
 //modules
-@import "modules/index";
+// @import "modules/index";
 
 //states
-@import "states/index";
+// @import "states/index";
 

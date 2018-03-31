@@ -37,7 +37,7 @@ var path = {
 		// html: 'build/',
 		pug: 'build/',
 		js: 'build/js/',
-		css: 'build/style'
+		css: 'build/style/'
 	},
 	//source paths
 	src: {
@@ -125,10 +125,9 @@ gulp.task('style:build', function () {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		// .pipe(rename({suffix: '.min'}))
-		.pipe(rename('style.css'))
+		.pipe(rename({suffix: '.min'}))
 		.pipe(cleancss({compatibility: 'ie8'}))
-		.pipe(sourcemaps.write('..'))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest(path.build.css))
 		.on('error', function (err) {
 			gutil.log(err.message);

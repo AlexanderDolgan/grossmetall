@@ -11,7 +11,7 @@ $variations: (
   ),
   dark: (
     function: darken,
-    parameters: 10%
+    parameters: 15%
   ),
   fade: (
     function: rgba,
@@ -20,9 +20,13 @@ $variations: (
   gray: (
     function: grayscale
   ),
+  tint: (
+    function: mix,
+    parameters: white 75%
+  ),
   shade: (
     function: mix,
-    parameters: white 80%
+    parameters: black 75%
   )
 );
 

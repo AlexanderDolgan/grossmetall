@@ -15,8 +15,8 @@ body {
 	line-height: $global-line-height;
 	background-color: $body-background;
 	-webkit-font-smoothing: $font-smooth;
-	background-color: cv(primary);
-	color: $black;
+	background-color: cv(white);
+	color: cv(white);
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -30,11 +30,11 @@ img {
 
 a {
 	text-decoration: none;
-	color: $primary-color;
+	color: cv(primary);
 	&:hover,
 	&:active,
 	&:focus {
-		color: darken($primary-color, 15%);
+		color: cv(primary, shade);
 		text-decoration: underline;
 	}
 }
@@ -75,14 +75,14 @@ h6 {font-size: 16px;}
 //Bloquote
 blockquote {
 	background: #f9f9f9;
-	border-left: 3px solid $primary-color;
+	border-left: 3px solid cv(primary);
 	margin: 1.5em 10px;
 	padding: 0.5em 10px;
 	quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote:before {
-	color: $primary-color;
+	color: cv(primary);
 	content: open-quote;
 	font-size: 3em;
 	line-height: 0.1em;
@@ -100,3 +100,35 @@ dd {
 }
 
 
+.item {
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+
+$colorr: #fff;
+
+.first {
+	& .item:nth-child(1) {	
+		background-color: cv(primary);
+	}
+	& .item:nth-child(2) {
+		
+		background-color: cv(secondary);
+	}
+	& .item:nth-child(3) {
+		background-color: cv(third);
+	}
+}
+
+.second {
+	& .item:nth-child(1) {
+		background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
+	}
+	& .item:nth-child(2) {
+		background-color: saturate(mix(white, cv(primary), 40%), 15%);
+	}
+	& .item:nth-child(3) {
+		background-color: saturate(mix(black, cv(third), 40%), 15%);
+	}
+}

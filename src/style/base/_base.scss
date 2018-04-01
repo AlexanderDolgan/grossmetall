@@ -126,9 +126,9 @@ $colorr: #fff;
 		background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
 	}
 	& .item:nth-child(2) {
-		background-color: saturate(mix(white, cv(primary), 40%), 15%);
+		background-color: saturate(cv(primary), 15%);
 	}
 	& .item:nth-child(3) {
-		background-color: saturate(mix(black, cv(third), 40%), 15%);
+		background-color: cv(primary, sat);
 	}
 }

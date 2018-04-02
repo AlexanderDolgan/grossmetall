@@ -123,12 +123,14 @@ $colorr: #fff;
 
 .second {
 	& .item:nth-child(1) {
-		background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
+		// background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
+		// background-color: cv(primary, shade, desat);
+		background-color: cv(primary, shade, desat)
 	}
 	& .item:nth-child(2) {
-		background-color: saturate(cv(primary), 15%);
+		background-color: saturate(cv(primary, shade), 15%);
 	}
 	& .item:nth-child(3) {
-		background-color: cv(primary, sat);
+		
 	}
 }

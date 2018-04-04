@@ -30,11 +30,11 @@ img {
 
 a {
 	text-decoration: none;
-	color: cv(primary);
+	color: ac(secondary);
 	&:hover,
 	&:active,
 	&:focus {
-		color: cv(primary, shade);
+		color: ac(secondary, shade, sat);
 		text-decoration: underline;
 	}
 }
@@ -97,43 +97,4 @@ blockquote p {
 
 dd {
 	margin: 0;
-}
-
-
-.item {
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-}
-
-$colorr: #fff;
-
-.first {
-	& .item:nth-child(1) {	
-		background-color: cv(primary);
-	}
-	& .item:nth-child(2) {
-		
-		background-color: cv(secondary);
-	}
-	& .item:nth-child(3) {
-		background-color: cv(third);
-	}
-}
-
-.second {
-	& .item:nth-child(1) {
-		// background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
-		// background-color: cv(primary, shade, desat);
-		// background-color: cv(primary, shade)
-		background-color: red;
-	}
-	& .item:nth-child(2) {
-		// background-color: cv(primary, tint);
-		// background-color: mix(black, gc(primary), 20%);
-		background-color: gc(green, tint);
-	}
-	& .item:nth-child(3) {
-		background-color: gc(green, tint);
-	}
 }

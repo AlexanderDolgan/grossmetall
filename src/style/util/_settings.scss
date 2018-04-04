@@ -9,13 +9,14 @@ $font-smooth: antialiased;
 
 //Colors
 $colors: (
-        primary: hsl(128,100,80),
-        secondary: hsl(233,100,80),
+        primary: hsl(0,0,0),
+        secondary: hsl(212,73,60),
         third: hsl(309,100,80),
-        warning: #FFAE00,
-        alert: #EC5840,
-        white: #fff,
-        black: #4A4A4A
+        accept: hsl(90,77,60),
+        alert: hsl(0,77,60),
+        warning: hsl(40,77,50),
+        white: hsl(0,0,100),
+        black: hsl(0,0,0)
 );
 
 $body-background: cv(white);

@@ -125,12 +125,15 @@ $colorr: #fff;
 	& .item:nth-child(1) {
 		// background-color: saturate(mix(black, map-get($colors, primary), 40%), 15%);
 		// background-color: cv(primary, shade, desat);
-		background-color: gc(primary, tint, desat)
+		// background-color: cv(primary, shade)
+		background-color: red;
 	}
 	& .item:nth-child(2) {
-		background-color: desaturate(cv(primary, tint), 15%);
+		// background-color: cv(primary, tint);
+		// background-color: mix(black, gc(primary), 20%);
+		background-color: gc(green, tint);
 	}
 	& .item:nth-child(3) {
-		
+		background-color: gc(green, tint);
 	}
 }

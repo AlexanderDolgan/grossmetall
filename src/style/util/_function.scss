@@ -40,7 +40,7 @@ $variations: (
     } @else {
       // make it easier to deal with nested map
       $this-variation: map-get($variations, $variation);
-      // $args = $function, $color
+			// $args = $function, $color
       $args: join(map-get($this-variation, function), $color);
       @if map-get($this-variation, parameters) {
         // $args = $function, $colors, $parameters
@@ -59,11 +59,11 @@ $variations: (
 $saturations: (
 	sat: (
 		function: saturate,
-		parameters: 10%
+		parameters: 15%
 	),
 	desat: (
 		function: desaturate,
-		parameters: 10%
+		parameters: 15%
 	),
 );
 

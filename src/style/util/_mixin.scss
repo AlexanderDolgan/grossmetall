@@ -4,7 +4,7 @@
 // $hover - on links hover
 // $active - for active links
 @mixin linx ($link, $visit, $hover, $active) {
-  a {
+  a { 
     color: $link;
     &:visited {
       color: $visit;

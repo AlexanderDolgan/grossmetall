@@ -7,16 +7,17 @@
 html {
 	width: 100%;
 	height: 100%;
+	font-size: $global-font-size;
 }
 
 body {
-	font-size: $global-font-size;
+	font-size: $body-font-size;
 	font-family: $global-font-family;
 	line-height: $global-line-height;
 	background-color: $body-background;
 	-webkit-font-smoothing: $font-smooth;
-	background-color: cv(white);
-	color: cv(white);
+	background-color: ac(white);
+	color: ac(text);
 	margin: 0;
 	padding: 0;
 	width: 100%;

@@ -3,7 +3,8 @@
 //Global
 $global-font-family: 'Roboto', sans-serif;
 $second-font-family: 'Roboto Slab', serif;
-$global-font-size: 16px;
+$global-font-size: 8px;
+$body-font-size: 1.75rem;
 $global-line-height: 1.7;
 $font-smooth: antialiased;
 
@@ -16,7 +17,10 @@ $colors: (
         alert: hsl(0,77,60),
         warning: hsl(40,77,50),
         white: hsl(0,0,100),
-        black: hsl(0,0,0)
+        black: hsl(0,0,0),
+        gray: hsl(0,0,60),
+        lightgray: hsl(0,0,95),
+        text: hsl(0,0,0)
 );
 
 $body-background: cv(white);
@@ -27,17 +31,18 @@ $base-spacing: 1em;
 // Media q breakpoints
 
 $b-small: 0;
-$b-medium: 48em;
-$b-large: 64em;
-$b-xlarge: 90em;
-$b-xxlarge: 100em;
+$b-medium: 320px;
+$b-medium-advance: 640px;
+$b-large: 960px;
+$b-xlarge: 1280px;
+$b-xxlarge: 1600px;
 
-$b-small-only: 0 47.9375em;
-$b-medium-only: 48em 74, 9375em;
-$b-large-only: 75em 99, 9375em;
+$b-small-only: 0 319px;
+$b-medium-only: 320px 959px;
+$b-large-only: 960px;
 
 //container width
-$container-width: $b-large;
+$container-width: $b-xlarge;
 
 //Typography
 

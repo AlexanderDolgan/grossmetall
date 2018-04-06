@@ -1,0 +1,14 @@
+//верхняя линия с телефоном горячей линии и переключением языка
+.hotline-languages {
+	position: relative;
+	background-color: ac(lightgray);
+	text-align: center;
+	line-height: 2;
+	& a {
+		color: ac(text);
+	}
+	& a:last-child {
+		position: absolute;
+		right: 2rem;
+	}
+}

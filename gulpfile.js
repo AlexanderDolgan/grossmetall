@@ -35,7 +35,7 @@ var path = {
 	build: {
 		fonts: 'build/fonts/',
 		img: 'build/img/',
-		icons: 'src/img/assets/sprites',
+		icons: 'src/img/assets/sprites/',
 		// html: 'build/',
 		pug: 'build/',
 		js: 'build/js/',
@@ -46,7 +46,6 @@ var path = {
 		fonts: 'src/fonts/**/*.*',
 		img: 'src/img/**/*.*',
 		icons: 'src/img/assets/icons/*.png',
-		iconsRetina: 'src/img/assets/icons/*@2x.png',
 		//html: 'src/*.html',
 		pug: 'src/pug/*.pug',
 		js: 'src/js/*.js',
@@ -151,25 +150,17 @@ gulp.task('image:build', function () {
 });
 
 
-// imgName String - Filename to save image as
-// cssName String - Filename to save CSS as
-// imgPath String - Optional path to use in CSS referring to image location
-// retinaSrcFilter String|String[] - Filepaths to filter out from incoming stream for our retina spritesheet
-// retinaImgName String - Filename to save retina spritesheet as
-
 gulp.task('sprite:build', function () {
-	var spriteData = gulp.src('path.src.icons').pipe(spritesmith({
-			imgName: 'sprite.png',
-			
-			retinaSrcFilter: ['path.src.iconsRetina'],
-			retinaImgName: 'sprite@2x.png',
-
-			imgPath: '../../img/assets/sprites/sprites.png',
-			cssName: '../style/util/_sprite.scss',
-
-			padding: 20
+	var spriteData = gulp.src('src/img/assets/icons/*.png').pipe(spritesmith({
+		retinaSrcFilter: ['src/img/assets/icons/*@2x.png'],
+    imgName: 'sprite.png',
+		retinaImgName: 'sprite@2x.png',
+		imgPath: '../../img/assets/sprites/sprites.png',
+		cssName: '../../../style/util/_sprite.scss',
+		
+		padding: 20
 	}));
-	return spriteData.pipe(gulp.dest('path.build.icons'));
+	return spriteData.pipe(gulp.dest(path.build.icons));
 });
 
 gulp.task('fonts:build', function () {

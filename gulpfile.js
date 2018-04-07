@@ -55,7 +55,7 @@ var path = {
 	watch: {
 		fonts: 'src/fonts/**/*.*',
 		img: 'src/img/**/*.*',
-		icons: 'src/img/assets/icons/*.*',
+		icons: 'src/img/assets/icons/*.png',
 		//html: 'src/**/*.html',
 		pug: 'src/pug/**/*.pug',
 		js: 'src/js/**/*.js',
@@ -155,9 +155,9 @@ gulp.task('sprite:build', function () {
 		retinaSrcFilter: ['src/img/assets/icons/*@2x.png'],
     imgName: 'sprite.png',
 		retinaImgName: 'sprite@2x.png',
-		imgPath: '../../img/assets/sprites/sprites.png',
+		imgPath: '../img/assets/sprites/sprite.png',
+		retinaImgPath: '../img/assets/sprites/sprite@2x.png',
 		cssName: '../../../style/util/_sprite.scss',
-		
 		padding: 20
 	}));
 	return spriteData.pipe(gulp.dest(path.build.icons));
@@ -173,6 +173,7 @@ gulp.task('build', [
 	'pug:build',
 	'js:build',
 	'style:build',
+	'sprite:build',
 	'image:build',
 	'fonts:build'
 	// 'svgSprite:build'
@@ -194,9 +195,9 @@ gulp.task('watch', function () {
 	watch([path.watch.img], function (event, cb) {
 		gulp.start('image:build');
 	});
-	// watch([path.watch.icons], function (event, cb) {
-	//     gulp.start('svgSprite:build');
-	// });
+	watch([path.watch.icons], function (event, cb) {
+	    gulp.start('sprite:build');
+	});
 	watch([path.watch.fonts], function (event, cb) {
 		gulp.start('fonts:build');
 	});

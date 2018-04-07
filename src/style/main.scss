@@ -23,3 +23,9 @@ Version: 1.0
 //states
 // @import "states/index";
 
+//sprites
+@import "util/sprite";
+
+.close-btn {
+	@include retina-sprite($ic-close-group);
+}

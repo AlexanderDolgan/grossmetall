@@ -13,6 +13,10 @@
 	@include container;
 }
 
+#site-header {
+	box-shadow: .5rem .5rem .5rem ac(lightgray);
+}
+
 //site header
 //hotline-languages
 //logo-nav
@@ -41,4 +45,9 @@
 	@include container;
 	display: flex;
 	flex-flow: row wrap;
+	border-bottom: solid 1px ac(lightgray);
+}
+
+#site-main .about {
+	@include container;
 }

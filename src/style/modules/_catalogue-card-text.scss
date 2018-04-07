@@ -1,0 +1,15 @@
+.catalogue-card-text {
+	padding: 2rem 0;
+	width: 100%;
+	& h3 {
+		color: ac(text);
+		text-decoration: underline;
+		margin-bottom: 0;
+	}
+	&-main {
+		display: none;
+	}
+	&-footer {
+		display: none;
+	}
+}

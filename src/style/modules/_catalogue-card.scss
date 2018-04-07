@@ -1,9 +1,15 @@
 .catalogue-card {
 	width: 100%;
-	color: ac(text);
-	&:hover, &:active, &:focus {
+	padding: 2rem 0;
+	& a{
 		color: ac(text);
+		&:hover, &:active, &:focus {
+			color: ac(text);
+		}
 	}
+	// &-main {
+	// 	margin-top: 2rem;
+	// }
 	&-footer {
 		&-btn {
 			display: none;

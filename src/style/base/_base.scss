@@ -48,7 +48,7 @@ address {
 // Paragraphs
 p {
 	line-height: $paragraph-lineheight;
-	margin-bottom: $paragraph-margin-bottom;
+	margin-bottom: 0;
 }
 
 // Headings
@@ -62,6 +62,7 @@ h6 {
 	font-weight: $header-font-weight;
 	color: $header-color;
 	line-height: $header-lineheight;
+	margin-top: 0;
 }
 
 

@@ -26,29 +26,8 @@ html(lang="en")
 
 			section#site-main
 				.catalogue
-					.catalogue-card
-						.catalogue-card-header
-							h1 Продукция
-						.catalogue-card-main
-							img(src="", alt="card img")
-
-						.catalogue-card-footer
-							.catalogue-card-footer-description
-								p Типовая / Нетиповая / Художественная
-							.catalogue-card-footer-btn
-								button(type="button").btn.ghost-btn Каталог
-					
-					.catalogue-card
-						.catalogue-card-header
-							h1 Продукция
-						.catalogue-card-main
-							img(src="", alt="card img")
-
-						.catalogue-card-footer
-							.catalogue-card-footer-description
-								p Типовая / Нетиповая / Художественная
-							.catalogue-card-footer-btn
-								button(type="button").btn.ghost-btn Каталог
+					include partials/catalogue-card
+					include partials/catalogue-card
 
 			section#site-footer
 				

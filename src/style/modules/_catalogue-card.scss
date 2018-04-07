@@ -1,3 +1,12 @@
 .catalogue-card {
 	width: 100%;
+	color: ac(text);
+	&:hover, &:active, &:focus {
+		color: ac(text);
+	}
+	&-footer {
+		&-btn {
+			display: none;
+		}
+	}
 }

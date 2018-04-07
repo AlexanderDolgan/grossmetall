@@ -51,3 +51,12 @@
 #site-main .about {
 	@include container;
 }
+
+#site-main .news {
+	@include container;
+}
+
+.news-items {
+	display: flex;
+	flex-flow: row wrap;
+}

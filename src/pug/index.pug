@@ -35,14 +35,24 @@ html(lang="en")
 					include partials/catalogue-card-text
 
 				.about
+					header
+						h2 О компании
 					.about-text
-						h3 О компании
 						p.
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit. Voluptatem dignissimos eligendi odio modi, iste totam officiis aspernatur veniam debitis itaque reiciendis eveniet consectetur nesciunt quae possimus corporis tenetur voluptas hic cum?
 						p.
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit.
 					.about-img
 						img(src="//placehold.it/712x440", alt="about img")
+
+				.news
+					header 
+						h2 Новости
+					.news-items
+						include partials/news-item
+						include partials/news-item
+						include partials/news-item
+
 
 			section#site-footer
 				

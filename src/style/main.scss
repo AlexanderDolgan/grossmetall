@@ -9,23 +9,17 @@ Version: 1.0
 @import "util/settings";
 @import "util/mixin";
 @import "util/function";
+//sprites
+@import "util/sprite";
 
 //base
 @import "base/base";
 
 //layout
-//susy and breakpoints
-// @import "layout/index";
+@import "layout/index";
 
 //modules
 @import "modules/index";
 
 //states
 // @import "states/index";
-
-//sprites
-@import "util/sprite";
-
-.close-btn {
-	@include retina-sprite($ic-close-group);
-}

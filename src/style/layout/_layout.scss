@@ -3,27 +3,42 @@
 	height: 100%;
 }
 
-//fluid-contaier
-.l-wrapper {
-	position: relative;
-	width: 100%;
-	padding: 4rem 2rem;
-}
-
 //content container
-.l-content-wrapper {
-	position: relative;
-	min-height: $container;
-	padding: 4rem 2rem;
+.container {
+	@include container(0, 0);
 }
 
+//content container vertical padding
+.container-padding {
+	@include container;
+}
 
-@media (min-width: $b-medium) {
-	.l-wrapper {
-		padding: 8rem 4rem;
-	}
+//site header
+//hotline-languages
+//logo-nav
+#site-header .hotline-languages {
+	position: relative;
+	background-color: ac(lightgray);
+	text-align: center;
+	line-height: 2;
+}
 
-	.l-content-wrapper {
-		padding: 8rem 4rem;
+#site-header .logo-nav {
+	@include container;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+	& .logo {
+		width: percentage(7/12);
 	}
+	& .nav {
+		width: percentage(2/12);
+	}
+}
+
+#site-main .catalogue {
+	@include container;
+	display: flex;
+	flex-flow: row wrap;
 }

@@ -26,15 +26,16 @@ $colors: (
 $body-background: cv(white);
 $body-font-color: cv(primary);
 
-$base-spacing: 1em;
+$base-spacing: 2em;
 
 // Media q breakpoints
 
-$b-small: 0;
-$b-medium: 320px;
+$b-xsmall: 0;
+$b-small: 320px;
 $b-medium-advance: 640px;
+$b-medium: 768px;
 $b-large: 960px;
-$b-xlarge: 1280px;
+$b-xlarge: 1280px; //container width
 $b-xxlarge: 1600px;
 
 $b-small-only: 0 319px;
@@ -42,7 +43,7 @@ $b-medium-only: 320px 959px;
 $b-large-only: 960px;
 
 //container width
-$container-width: $b-xlarge;
+$container: $b-xlarge;
 
 //Typography
 

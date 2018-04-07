@@ -1,7 +1,39 @@
+// nav open btn
+.nav-open-btn {
+	@include retina-sprite($bars-group);
+}
 // основная навигация мобильная версия
 .nav-mob {
-	& .close-btn {
-		width: 5rem;
-		height: 5rem;
+	position: fixed;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	min-height: 100vh;
+	min-width: 100vw;
+	top: 0;
+	left: 0;
+	background-color: ac(white);
+	display: none;
+}
+
+.nav-mob ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	& li {
+		display: block;
+		height: 8rem;
+		margin-left: 4rem;
+		& a {
+			color: ac(text);
+			font-size: 4rem;
+		}
 	}
+}
+
+.nav-mob .close-btn {
+	@include retina-sprite($ic-close-group);
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
 }

@@ -1,0 +1,32 @@
+.footer-navigation {
+	@include container;
+	display: flex;
+	flex-flow: row wrap;
+	&-item {
+		width: 100%;
+		h4 {
+			margin-bottom: 0;
+			font-weight: normal;
+		}
+	}
+}
+
+.footer-navigation-item .footer-nav {
+	list-style: none;
+	margin: 0;
+	margin-top: 2rem;
+	padding: 0;
+	& a {
+		color: ac(text);
+		line-height: 2;
+		text-decoration: underline;
+	}
+}
+
+.copyright {
+	background-color: ac(lightgray);
+	&-inner {
+		@include container(0,0);
+		text-align: center;
+	}
+}

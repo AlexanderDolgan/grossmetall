@@ -1,8 +1,19 @@
-#site-header {
+#site-header .logo-nav{
 	& .logo {
 		width: percentage(5/12);
 	}
 	& .nav {
-		width: percentage(2/12);
+			width: percentage(2/12);
+	}
+}
+
+@media (min-width: $b-medium) {
+	#site-header .logo-nav{
+		& .logo {
+			width: percentage($number: 11/12);
+		}
+		& .nav {
+			width: percentage($number: 1/12);
+		}
 	}
 }

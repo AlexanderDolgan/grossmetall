@@ -13,3 +13,15 @@
 		display: none;
 	}
 }
+
+@media (min-width: $b-medium) {
+	.catalogue-card-text {
+		&-main {
+			display: block;
+		}
+		&-footer {
+			margin-top: 2rem;
+			display: block;
+		}
+	}
+}

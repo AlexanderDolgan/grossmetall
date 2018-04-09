@@ -1,0 +1,8 @@
+#site-wrapper .hero {
+	@include container;
+	&-text h2 {
+		display: none;
+		margin-bottom: 0;
+		font-weight: normal;
+	}
+}

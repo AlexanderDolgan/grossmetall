@@ -33,12 +33,6 @@
 	flex-flow: row nowrap;
 	justify-content: space-between;
 	align-items: center;
-	& .logo {
-		width: percentage(5/12);
-	}
-	& .nav {
-		width: percentage(2/12);
-	}
 }
 
 #site-main .catalogue {

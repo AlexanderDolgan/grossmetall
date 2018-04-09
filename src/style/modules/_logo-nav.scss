@@ -1,0 +1,8 @@
+#site-header {
+	& .logo {
+		width: percentage(5/12);
+	}
+	& .nav {
+		width: percentage(2/12);
+	}
+}

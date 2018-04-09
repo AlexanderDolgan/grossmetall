@@ -14,20 +14,19 @@
 }
 
 #site-header {
-	box-shadow: 0 .5rem .5rem ac(lightgray);
+	// box-shadow: 0 .5rem .5rem ac(lightgray);
+	border-bottom: solid 1px ac(lightgray);
 }
 
 //site header
-//hotline-languages
-//logo-nav
-#site-header .hotline-languages {
+#site-header .header-top {
 	position: relative;
 	background-color: ac(lightgray);
 	text-align: center;
 	line-height: 2;
 }
 
-#site-header .logo-nav {
+#site-header .header-mid {
 	@include container;
 	display: flex;
 	flex-flow: row nowrap;
@@ -35,26 +34,33 @@
 	align-items: center;
 }
 
+
+//site main
 #site-main .catalogue {
 	@include container;
-	display: flex;
-	flex-flow: row wrap;
 	border-bottom: solid 1px ac(lightgray);
+	&-items {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
 }
 
 #site-main .about {
 	@include container;
+	border-bottom: solid 1px ac(lightgray);
 }
 
 #site-main .news {
 	@include container;
+	border-bottom: solid 1px ac(lightgray);
+	& header {
+		padding: 0 2rem;
+	}
 }
 
-.news-items {
-	display: flex;
-	flex-flow: row wrap;
-}
 
+//site footer
 #site-footer {
 	box-shadow: 0 -.5rem .5rem ac(lightgray);
 }

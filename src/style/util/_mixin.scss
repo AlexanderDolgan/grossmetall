@@ -13,9 +13,9 @@
 	width: 100%;
 	max-width: $b-xlarge;
 	margin: 0 auto;
-	padding: $pad-vert-small 2rem;
-	@media (min-width: $b-medium) {
-		padding: $pad-vert 4rem;
+	padding: $pad-vert-small 0;
+	@media (min-width: $b-large) {
+		padding: $pad-vert 2rem;
 	}
 	// @include clearfix;
 }

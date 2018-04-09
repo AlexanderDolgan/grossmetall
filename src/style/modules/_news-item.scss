@@ -1,5 +1,14 @@
+#site-main .news-items {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	@media (min-width: $b-medium) {
+		flex-flow: row nowrap;
+	}
+}
+
 .news-item {
-	padding: 2rem 0;
+	padding: 2rem;
 	&-header {
 		& a {
 			color: ac(text);
@@ -13,6 +22,25 @@
 		margin-top: 2rem;
 		& a {
 			text-decoration: underline;
+		}
+	}
+}
+
+@media (min-width: $b-medium) {
+	#site-main .news {
+		& header {
+			padding-left: 2rem;
+		}
+		& .news-item {
+			padding: 2rem;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	#site-main .news {
+		& .news-item {
+			max-width: 49rem;
 		}
 	}
 }

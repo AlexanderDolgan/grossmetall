@@ -1,18 +1,26 @@
 .catalogue-card {
 	width: 100%;
-	padding: 2rem 0;
+	padding: 2rem;
 	& a{
 		color: ac(text);
 		&:hover, &:active, &:focus {
 			color: ac(text);
 		}
 	}
-	// &-main {
-	// 	margin-top: 2rem;
-	// }
 	&-footer {
 		&-btn {
 			display: none;
+		}
+	}
+}
+
+@media (min-width: $b-medium) {
+	.catalogue-card {
+		width: percentage(6/12);
+		&-footer {
+			&-btn {
+				display: none;
+			}
 		}
 	}
 }

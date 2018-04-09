@@ -4,14 +4,17 @@
 	flex-flow: row wrap;
 	&-item {
 		width: 100%;
+		padding: 2rem;
 		h4 {
 			margin-bottom: 0;
+		}
+		&:first-child {
+			display: none;
 		}
 	}
 }
 
 .footer-navigation-item .footer-nav {
-	display: none;
 	& ul {
 		list-style: none;
 		margin: 0;
@@ -58,4 +61,17 @@
 		@include container(0,0);
 		text-align: center;
 	}
+}
+
+@media (min-width: $b-medium) {
+	.footer-navigation {
+		flex-flow: row nowrap;
+		&-item {
+			width: percentage(4/12);
+			&:first-child {
+				display: block;
+			}
+		}
+	}
+	
 }

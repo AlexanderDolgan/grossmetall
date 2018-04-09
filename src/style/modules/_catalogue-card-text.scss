@@ -1,5 +1,5 @@
 .catalogue-card-text {
-	padding: 2rem 0;
+	padding: 2rem;
 	width: 100%;
 	& h3 {
 		color: ac(text);
@@ -8,6 +8,7 @@
 	}
 	&-main {
 		display: none;
+		padding-top: 2rem;
 	}
 	&-footer {
 		display: none;
@@ -16,6 +17,7 @@
 
 @media (min-width: $b-medium) {
 	.catalogue-card-text {
+		width: percentage(4/12);
 		&-main {
 			display: block;
 		}
@@ -23,5 +25,11 @@
 			margin-top: 2rem;
 			display: block;
 		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.catalogue-card-text {
+		max-width: 49rem;
 	}
 }

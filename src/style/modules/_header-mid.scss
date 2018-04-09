@@ -1,4 +1,5 @@
-#site-header .logo-nav{
+#site-header .header-mid{
+	padding: 2rem;
 	& .logo {
 		width: percentage(5/12);
 	}
@@ -8,9 +9,10 @@
 }
 
 @media (min-width: $b-medium) {
-	#site-header .logo-nav{
+	#site-header .header-mid{
+		padding: 2rem;
 		& .logo {
-			width: percentage($number: 11/12);
+			width: percentage($number: 3/12);
 		}
 		& .nav {
 			width: percentage($number: 1/12);

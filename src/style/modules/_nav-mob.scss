@@ -1,11 +1,7 @@
-// nav open btn
-.nav-open-btn {
-	@include retina-sprite($bars-group);
-}
 // основная навигация мобильная версия
 .nav-mob {
 	position: fixed;
-	display: flex;
+	display: none;
 	flex-flow: row nowrap;
 	align-items: center;
 	min-height: 100vh;
@@ -13,7 +9,7 @@
 	top: 0;
 	left: 0;
 	background-color: ac(white);
-	display: none;
+	z-index: 9999;
 }
 
 .nav-mob ul {
@@ -27,7 +23,61 @@
 		& a {
 			color: ac(text);
 			font-size: 4rem;
+			transition: color .3s ease-in, background-color .3s ease-in;
 		}
+	}
+}
+
+.active {
+	display: flex;
+}
+
+.active li{
+	animation-name: fade-left;
+	animation-duration: .6s;
+	animation-timing-function: ease-out;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+.active li:nth-child(1) {
+	animation-delay: .1s;
+}
+.active li:nth-child(2) {
+	animation-delay: .2s;
+}
+.active li:nth-child(3) {
+	animation-delay: .3s;
+}
+.active li:nth-child(4) {
+	animation-delay: .4s;
+}
+.active li:nth-child(5) {
+	animation-delay: .5s;
+}
+.active li:nth-child(6) {
+	animation-delay: .6s;
+}
+
+@keyframes fade-left {
+	0% {
+		margin-left: -150px;
+		opacity: 0;
+	}
+	100% {
+		margin-left: 0;
+		opacity: 1;
+	}
+}
+
+// nav open btn
+.nav-open-btn {
+	@include retina-sprite($bars-group);
+}
+
+@media (min-width: $b-xlarge) {
+	.nav-open-btn {
+		display: none;
 	}
 }
 

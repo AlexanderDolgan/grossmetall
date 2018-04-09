@@ -1,0 +1,25 @@
+.nav-screen {
+	display: none;
+}
+
+@media (min-width: $b-xlarge) {
+	.nav-screen {
+		& ul {
+			text-align: right;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			& li {
+				display: inline-block;
+				& a {
+					display: block;
+					padding: .5rem 2rem;
+					color: ac(text);
+				}
+				& .active {
+					border-bottom: solid .3rem ac(secondary);
+				}
+			}
+		}
+	}		
+}

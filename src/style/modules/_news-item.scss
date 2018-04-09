@@ -1,12 +1,3 @@
-#site-main .news-items {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	@media (min-width: $b-medium) {
-		flex-flow: row nowrap;
-	}
-}
-
 .news-item {
 	padding: 2rem;
 	&-header {

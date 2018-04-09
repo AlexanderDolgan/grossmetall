@@ -46,10 +46,37 @@
 	}
 }
 
+
+
+//about
 #site-main .about {
 	@include container;
 	border-bottom: solid 1px ac(lightgray);
+	& header {
+		padding: 0 2rem;
+	}
+	& .about-items {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
+
+@media (min-width: $b-medium) {
+	#site-main .about {
+		& header {
+			padding-left: 2rem;
+		}
+		& .about-items {
+			padding: 0 2rem;
+			flex-flow: row nowrap;
+		}
+	}
+}
+
+
 
 #site-main .news {
 	@include container;
@@ -57,10 +84,18 @@
 	& header {
 		padding: 0 2rem;
 	}
+	&-items {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		@media (min-width: $b-medium) {
+			flex-flow: row nowrap;
+		}
+	}
 }
 
 
 //site footer
 #site-footer {
-	box-shadow: 0 -.5rem .5rem ac(lightgray);
+	background: linear-gradient(#5e5d5d, #3c3c3c)
 }

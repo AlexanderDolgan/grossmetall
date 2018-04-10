@@ -16,8 +16,9 @@ html(lang="en")
 						a(href="#") en
 				
 				.header-mid
-					//- logo
-					img.logo( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
+					a(href="#").logo
+						//- logo
+						img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
 					.nav
 						//- mobile navigarion full screen 
 						include partials/nav-mob
@@ -99,3 +100,8 @@ html(lang="en")
 
 				.copyright
 					.copyright-inner Москва 2018
+
+					script(src="./js/main.min.js")
+					//- script(src="//code.jquery.com/jquery-1.11.0.min.js")
+					//- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
+					//- script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")

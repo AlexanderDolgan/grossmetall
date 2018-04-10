@@ -1,13 +1,13 @@
 $(document).ready(function(){
 	
-	$('.ham-btn').on('click', function() {
-		$('.nav-wrapper').css('left', '0');
-		$('.main-nav').addClass('active');
+	$('.nav-open-btn').on('click', function() {
+		$('body').addClass('no-scroll');
+		$('.nav-mob').addClass('active-nav');
 	});
 
 	$('.close-btn').on('click', function() {
-		$('.nav-wrapper').css('left', '-100%');
-		$('.main-nav').removeClass('active');
+		$('body').removeClass('no-scroll');
+		$('.nav-mob').removeClass('active-nav');
 	});
-	
+
 });

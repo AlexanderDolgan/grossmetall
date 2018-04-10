@@ -7,8 +7,8 @@
 			// display: none;
 			margin-bottom: 0;
 			font-weight: normal;
-			text-align: center;
-			font-size: 2rem;
+			// text-align: center;
+			font-size: 3rem;
 			line-height: 1.5;
 		}
 	}
@@ -18,7 +18,7 @@
 	#site-wrapper .hero {
 		&-text {
 			& h2 {
-				padding: 0 8rem;
+				padding: 0 2rem;
 				font-size: 4rem;
 			}
 		}
@@ -31,7 +31,7 @@
 		&-text {
 			margin-top: 4rem;
 			& h2 {
-				padding: 0 8rem;
+				padding: 0 2rem;
 			}
 		}
 	}

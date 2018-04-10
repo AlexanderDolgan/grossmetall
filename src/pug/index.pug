@@ -1,58 +1,50 @@
-<!DOCTYPE html>
-html(lang="en")
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		title GrossMetall
-		link(rel="stylesheet", href="./style/main.min.css")
+include partials/head
+body
+	#site-wrapper
+		section#site-header
+			include partials/site-header/site-header
 
-	body
-		#site-wrapper
-			section#site-header
-				include partials/site-header/site-header
+		section#site-main
+			//- hero с картинкой
+			.hero
+				.hero-img
+					img(src="./img/hero.jpg", alt="hero img")
+				.hero-text
+					h2 Производсвто фасадных панелей. Перфорация. Обработка металла.
+			//- категории
+			.catalogue
+				.catalogue-items
+					include partials/catalogue-card
+					include partials/catalogue-card
+			
+			//- категории второстепенные
+			.catalogue
+				.catalogue-items
+					include partials/catalogue-card-text
+					include partials/catalogue-card-text
+					include partials/catalogue-card-text
 
-			section#site-main
-				//- hero с картинкой
-				.hero
-					.hero-img
-						img(src="./img/hero.jpg", alt="hero img")
-					.hero-text
-						h2 Производсвто фасадных панелей. Перфорация. Обработка металла.
-				//- категории
-				.catalogue
-					.catalogue-items
-						include partials/catalogue-card
-						include partials/catalogue-card
-				
-				//- категории второстепенные
-				.catalogue
-					.catalogue-items
-						include partials/catalogue-card-text
-						include partials/catalogue-card-text
-						include partials/catalogue-card-text
+			//- о компании
+			.about
+				header
+					h2 О компании
+				.about-items
+					.about-item-text
+						p.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit. Voluptatem dignissimos eligendi odio modi, iste totam officiis aspernatur veniam debitis itaque reiciendis eveniet consectetur nesciunt quae possimus corporis tenetur voluptas hic cum?
+						p.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit.
+					.about-item-img
+						img(src="//placehold.it/712x440", alt="about img")
 
-				//- о компании
-				.about
-					header
-						h2 О компании
-					.about-items
-						.about-item-text
-							p.
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit. Voluptatem dignissimos eligendi odio modi, iste totam officiis aspernatur veniam debitis itaque reiciendis eveniet consectetur nesciunt quae possimus corporis tenetur voluptas hic cum?
-							p.
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deserunt doloribus quam officiis nulla doloremque enim velit.
-						.about-item-img
-							img(src="//placehold.it/712x440", alt="about img")
-
-				.news
-					header 
-						h2 Новости
-					.news-items
-						include partials/news-item
-						include partials/news-item
-						include partials/news-item
+			.news
+				header 
+					h2 Новости
+				.news-items
+					include partials/news-item
+					include partials/news-item
+					include partials/news-item
 
 
-			section#site-footer
-				include partials/site-footer
+		section#site-footer
+			include partials/site-footer

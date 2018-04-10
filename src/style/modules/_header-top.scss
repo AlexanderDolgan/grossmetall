@@ -8,3 +8,15 @@
 		right: 2rem;
 	}
 }
+
+@media (min-width: $b-large) {
+	.header-top {
+		& a {
+			padding: 0 2rem;
+		}
+		& a:last-child {
+			position: relative;
+			right: 0;
+		}
+	}
+}

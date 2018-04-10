@@ -1,0 +1,35 @@
+include partials/head
+body
+	#site-wrapper
+		section#site-header
+			include partials/site-header/site-header
+
+		section#site-main
+			.contacts-page
+				header
+					h2 Контакты
+				.contacts
+					.contacts-item
+						h4 Офис в Москве:
+						address
+							a(href="#") Адрес: г. Москва, Тверская, 36
+							a(href="#") Телефон: +7 (495) 765-52-56
+							a(href="#") e-mail: info@grossmetall.ru
+						
+						.social
+							.soc-item.fb
+							.soc-item.in
+					
+					.contacts-item
+						h4 Производсвто:
+						address
+							a(href="#") Адрес: г. Москва, Тверская, 36
+							a(href="#") Телефон: +7 (495) 765-52-56
+							a(href="#") e-mail: info@grossmetall.ru
+
+				.map
+					.map-img
+						img(src="//placehold.it/1280x504", alt="contacts map")
+
+		section#site-footer
+			include partials/site-footer

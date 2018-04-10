@@ -1,0 +1,33 @@
+.contacts-item {
+	padding: 2rem;
+	font-size: 1.75rem;
+	line-height: 1.75;
+	max-width: 49rem;
+	& a {
+		display: block;
+		color: ac(text);
+	}
+}
+
+@media (min-width: $b-large) {
+	.contacts-item {
+		margin-right: 8rem;
+	}
+}
+
+.contacts-item .social {
+	margin-top: 2rem;
+	& .soc-item {
+		display: inline-block;
+		margin-right: 1rem;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	& .fb {
+		@include retina-sprite($ic-facebook-group);
+	}
+	& .in {
+		@include retina-sprite($ic-instagram-group);
+	}
+}

@@ -13,17 +13,25 @@
 	@include container;
 }
 
-#site-header {
-	// box-shadow: 0 .5rem .5rem ac(lightgray);
-	// border-bottom: solid 1px ac(lightgray);
-}
-
 //site header
 #site-header .header-top {
 	position: relative;
 	background-color: ac(lightgray);
 	text-align: center;
 	line-height: 2;
+}
+@media (min-width: $b-large) {
+	#site-header .header-top {
+		text-align: right;
+	}
+}
+
+@media (min-width: $b-xlarge) {
+	#site-header .header-top {
+		background-color: ac(white);
+		text-align: right;
+		line-height: 4;
+	}
 }
 
 #site-header .header-mid {
@@ -93,6 +101,37 @@
 		}
 	}
 }
+
+
+
+#site-main .contacts-page {
+	@include container();
+	& header {
+		padding: 2rem;
+	}
+	& .contacts {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	& .map {
+		padding: 2rem;
+		margin-top: 2rem;
+	}
+}
+
+
+
+#site-main .equipment {
+	@include container();
+	& header {
+		padding: 2rem;
+	}
+	.equipment-item {
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
 
 
 //site footer

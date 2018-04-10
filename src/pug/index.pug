@@ -10,20 +10,7 @@ html(lang="en")
 	body
 		#site-wrapper
 			section#site-header
-				.header-top
-					.container
-						a(href="tel:8-800-545-12-34") 8-800-545-12-34
-						a(href="#") en
-				
-				.header-mid
-					a(href="#").logo
-						//- logo
-						img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
-					.nav
-						//- mobile navigarion full screen 
-						include partials/nav-mob
-						.nav-open-btn
-						include partials/nav-screen
+				include partials/site-header/site-header
 
 			section#site-main
 				//- hero с картинкой
@@ -68,40 +55,4 @@ html(lang="en")
 
 
 			section#site-footer
-
-				.footer-navigation
-					.footer-navigation-item
-						.footer-nav
-							h4 Навигация
-							ul
-								li
-									a(href="#") Главная
-								li
-									a(href="") Продукция
-								li
-									a(href="") Оборудование
-								li
-									a(href="") Цвет
-								li
-									a(href="") Материалы
-								li
-									a(href="") Контакты
-
-					.footer-navigation-item
-						h4 Контакты
-							address
-								a(href="#") Адрес: г. Москва, Тверская, 36
-								a(href="#") Телефон: +7 (495) 765-52-56
-								a(href="#") e-mail: info@grossmetall.ru
-						
-						.social
-							.soc-item.fb
-							.soc-item.in
-
-				.copyright
-					.copyright-inner Москва 2018
-
-					script(src="./js/main.min.js")
-					//- script(src="//code.jquery.com/jquery-1.11.0.min.js")
-					//- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-					//- script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+				include partials/site-footer

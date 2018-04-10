@@ -2,8 +2,6 @@
 .nav-mob {
 	position: fixed;
 	display: none;
-	flex-flow: row nowrap;
-	align-items: center;
 	min-height: 100vh;
 	min-width: 100vw;
 	top: 0;
@@ -13,39 +11,33 @@
 }
 
 .nav-mob ul {
-	margin: 0;
-	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
 	list-style: none;
+	padding: 2rem	0;
+	margin: 0;
+	width: 100%;
 	& li {
 		display: block;
-		height: 8rem;
-		margin-left: 4rem;
 		& a {
 			display: block;
+			padding: 2rem;
 			color: ac(text);
-			padding: 4rem;
-			font-size: 3.8rem;
+			font-size: 3rem;
 			width: 100%;
-			transition: padding .2s ease-in;
 		}
-	}
-}
-
-.nav-mob ul li a {
-	&:hover {
-		padding-left: 5rem;
-		background-color: ac(secondary);
-		color: ac(white);
 	}
 }
 
 @media (min-width: $b-large) {
 	.nav-mob {
-		max-width: percentage(5/12);
+		width: percentage(4/12);
 		min-width: auto;
 		box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
 	}
 	.nav-mob ul {
+		padding: 5rem 0;
 		& li {
 			& a {
 				font-size: 3rem;
@@ -97,7 +89,7 @@
 
 @keyframes fade-left {
 	0% {
-		margin-left: -150px;
+		margin-left: -1rem;
 		opacity: 0;
 	}
 	100% {
@@ -125,7 +117,8 @@
 	right: 2rem;
 	top: 2rem;
 	transition: transform .3s ease-in-out;
+	z-index: 999999;
 	&:hover {
-		transform: rotate(180deg);
+		transform: rotate(10deg);
 	}
 }

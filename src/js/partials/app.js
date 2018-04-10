@@ -5,6 +5,11 @@ $(document).ready(function(){
 		$('.nav-mob').addClass('active-nav');
 	});
 
+	$('.body').on('click', function() {
+		$('body').removeClass('no-scroll');
+		$('.nav-mob').removeClass('active-nav');
+	});
+
 	$('.close-btn').on('click', function() {
 		$('body').removeClass('no-scroll');
 		$('.nav-mob').removeClass('active-nav');

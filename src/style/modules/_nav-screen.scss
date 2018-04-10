@@ -6,23 +6,44 @@
 	.nav-screen {
 	display: block;
 	}
+
 	.nav-screen ul {
 		text-align: right;
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		& li {
-			display: inline-block;
-			& a {
-				display: block;
-				padding: .5rem 2rem;
-				color: ac(text);
-			}
+	}
+
+	.nav-screen ul li {
+		display: inline-block;
+		& a {
+			position: relative;
+			display: block;
+			padding: .5rem 2rem;
+			color: ac(text);
+			transition: color .2s ease-in;
+			font-weight: 600;
 			&:hover {
 				text-decoration: none;
+				color: ac(secondary);
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				display: block;
+				bottom: 0;
+				left: 10%;
+				width: 0;
+				border-bottom: .3rem solid ac(secondary);
+				transition: width .33s ease-in, left, .33s;
 			}
 			& .active {
 				border-bottom: solid .3rem ac(secondary);
 			}
 		}
+		&:hover a::after {
+			width: 80%;
+			left: 10%;
+		}
+	}
 }

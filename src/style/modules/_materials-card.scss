@@ -1,0 +1,17 @@
+.materials-card {
+	display: flex;
+	flex-flow: row wrap;
+	&-item {
+		padding: 2rem;
+		width: 100%;
+	}
+}
+
+@media (min-width: $b-large) {
+	.materials-card {
+		flex-flow: row nowrap;
+			&-item {
+				width: percentage(4/12);
+		}
+	}
+}

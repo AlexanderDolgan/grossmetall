@@ -126,9 +126,13 @@
 	& > header {
 		padding: 2rem;
 	}
-	.equipment-item {
-		display: flex;
-		flex-flow: row wrap;
+}
+
+
+#site-main .materials {
+	@include container();
+	& > header {
+		padding: 2rem;
 	}
 }
 

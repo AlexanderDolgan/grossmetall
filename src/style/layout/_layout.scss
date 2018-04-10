@@ -123,7 +123,7 @@
 
 #site-main .equipment {
 	@include container();
-	& header {
+	& > header {
 		padding: 2rem;
 	}
 	.equipment-item {

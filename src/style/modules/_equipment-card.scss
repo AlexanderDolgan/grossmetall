@@ -1,0 +1,22 @@
+.equipment-card {
+	display: flex;
+	flex-flow: row wrap;
+	&-item {
+		padding: 2rem;
+		width: 100%;
+	}
+}
+
+@media (min-width: $b-large) {
+	.equipment-card {
+		flex-flow: row nowrap;
+		&-item {
+			width: percentage(4/12);
+			&-description {
+				& p:first-child {
+					margin-top: 0;
+				}
+			}
+		}	
+	}
+}

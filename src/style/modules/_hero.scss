@@ -27,8 +27,7 @@
 
 @media (min-width: $b-large) {
 	#site-wrapper .hero {
-		padding-top: 0;
-		border-bottom: solid 1px ac(lightgray);
+		padding: 0 4rem;
 		&-text {
 			margin-top: 4rem;
 			& h2 {

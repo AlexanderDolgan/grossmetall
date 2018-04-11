@@ -30,7 +30,6 @@
 	#site-header .header-top {
 		background-color: ac(white);
 		text-align: right;
-		line-height: 4;
 	}
 }
 
@@ -45,6 +44,9 @@
 
 //site main
 #site-main .catalogue {
+	& header {
+		padding: 2rem;
+	}
 	@include container;
 	border-bottom: solid 1px ac(lightgray);
 	&-items {
@@ -79,6 +81,7 @@
 		}
 		& .about-items {
 			padding: 0 2rem;
+			margin-top: 2rem;
 			flex-flow: row nowrap;
 		}
 	}
@@ -98,6 +101,7 @@
 		justify-content: space-between;
 		@media (min-width: $b-medium) {
 			flex-flow: row nowrap;
+			margin-top: 2rem;
 		}
 	}
 }
@@ -112,14 +116,13 @@
 	& .contacts {
 		display: flex;
 		flex-flow: row wrap;
+		margin-top: 2rem;
 	}
 	& .map {
 		padding: 2rem;
 		margin-top: 2rem;
 	}
 }
-
-
 
 #site-main .equipment {
 	@include container();
@@ -137,6 +140,19 @@
 }
 
 
+#site-main .colors {
+	@include container();
+	& > header {
+		padding: 2rem;
+	}
+}
+
+#site-main .portfolio {
+	@include container();
+	& > header {
+		padding: 2rem;
+	}
+}
 
 //site footer
 #site-footer {

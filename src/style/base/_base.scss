@@ -63,7 +63,8 @@ h6 {
 	font-weight: $header-font-weight;
 	color: $header-color;
 	line-height: $header-lineheight;
-	margin-top: 0;
+	margin: 0;
+	position: relative;
 }
 
 
@@ -74,6 +75,18 @@ h3 {font-size: 20px;}
 h4 {font-size: 16px;}
 h5 {font-size: 14px;}
 h6 {font-size: 14px;}
+
+h2 {
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 32px;
+	margin: 2rem 0;
+	@media (min-width: $b-medium) {
+		font-size: 40px;
+		margin: 6rem 0;
+		
+	}
+}
 
 //Bloquote
 blockquote {

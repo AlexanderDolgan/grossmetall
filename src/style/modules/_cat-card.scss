@@ -1,7 +1,6 @@
 .cat-card {
 	display: flex;
 	flex-flow: row wrap;
-	margin-top: 2rem;
 	&-item {
 		padding: 2rem;
 		width: 100%;
@@ -59,7 +58,7 @@
 @media (min-width: $b-medium) {
 	.cat-card {
 		flex-flow: row nowrap;
-		margin-top: 4rem;
+		padding: 4rem 0;
 		&-description {
 			width: percentage(1/3);
 		}

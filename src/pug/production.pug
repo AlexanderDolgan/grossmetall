@@ -1,0 +1,22 @@
+include partials/head
+body
+	#site-wrapper
+		section#site-header
+			include partials/site-header/site-header
+
+		section#site-main
+			.production
+				header
+					h2 Продукция
+					a(href="production-second.html") уровень ниже production-second.html
+			
+				.production-card-wrapper
+					include partials/catalogue-card
+					include partials/catalogue-card
+					include partials/catalogue-card
+					include partials/catalogue-card
+					include partials/catalogue-card
+					
+
+		section#site-footer
+			include partials/site-footer

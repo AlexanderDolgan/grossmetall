@@ -94,6 +94,9 @@
 	border-bottom: solid 1px ac(lightgray);
 	& header {
 		padding: 0 2rem;
+		& a {
+			color: ac(text);
+		}
 	}
 	&-items {
 		display: flex;
@@ -153,6 +156,19 @@
 		padding: 2rem;
 	}
 }
+
+#site-main .production {
+	@include container();
+	& > header {
+		padding: 2rem;
+	}
+	&-card-wrapper {
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+
 
 //site footer
 #site-footer {

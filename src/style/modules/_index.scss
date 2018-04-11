@@ -8,8 +8,10 @@
 @import 'hero';
 
 //cards
-@import 'catalogue-card';
+@import 'catalogue-card'; // used on index-services-productions
 @import 'catalogue-card-text';
+@import 'type-card'; // services-sub
+@import 'example-card'; // services-sub
 @import 'cat-card'; // materials, equipment, colors, portfolio
 @import 'news-item';
 @import 'contacts';

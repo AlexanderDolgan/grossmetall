@@ -168,6 +168,54 @@
 	}
 }
 
+#site-main .production-sub {
+	@include container();
+	& > header {
+		padding: 2rem;
+	}
+	&-card-wrapper {
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+
+
+#site-main .services-sub {
+	@include container();
+	& > header {
+		padding: 2rem;
+	}
+	&-types {
+		display: flex;
+		flex-flow: row wrap;		
+		justify-content: space-between;
+		padding: 2rem 0;
+		border-bottom: solid 1px ac(lightgray);
+	}
+	&-example {
+		& header {
+			padding-left: 2rem;
+		}
+		&-cards {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding: 2rem 0;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	#site-main .services-sub {
+		&-types {
+			padding: 8rem 0;
+		}
+		&-example {
+			padding: 8rem 0;
+		}
+	}
+}
 
 
 //site footer

@@ -1,0 +1,28 @@
+include partials/head
+body
+	#site-wrapper
+		section#site-header
+			include partials/site-header/site-header
+
+		section#site-main
+			.services-sub
+				header
+					h2 Услуги / Перфорация
+					a(href="services-sigle.html") уровень ниже Типовая services-sigle.html
+
+				.services-sub-types
+					include partials/type-card
+					include partials/type-card
+					include partials/type-card
+
+				.services-sub-example
+					header
+						h3 Сферы применения
+					.services-sub-example-cards
+						include partials/example-card
+						include partials/example-card
+						include partials/example-card
+						include partials/example-card
+
+		section#site-footer
+			include partials/site-footer

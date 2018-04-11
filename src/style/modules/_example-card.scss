@@ -1,0 +1,15 @@
+.example-card {
+	width: 100%;
+	padding: 2rem;
+	&-description {
+		margin-top: 2rem;
+		color: ac(text);
+	}
+}
+
+@media (min-width: $b-medium) {
+	.example-card {
+		width: percentage(1/4);
+		max-width: 38rem;
+	}	
+}

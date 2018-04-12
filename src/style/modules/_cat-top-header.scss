@@ -1,0 +1,14 @@
+.cat-top-header {
+	@include container();
+	background-image: linear-gradient(to bottom, #F9F9F9, #F1F1F1);
+	& header {
+		padding: 2rem;
+		& h2 {
+			margin-top: 0;
+		}
+		& p {
+			font-size: 3rem;
+			width: percentage(6/12);
+		}
+	}
+}

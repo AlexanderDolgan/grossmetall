@@ -42,7 +42,9 @@
 }
 
 
-//site main
+//-----------
+// CATLAOGUE 
+//-----------
 #site-main .catalogue {
 	& header {
 		padding: 2rem;
@@ -58,7 +60,9 @@
 
 
 
-//about
+//-----------
+// ABOUT 
+//-----------
 #site-main .about {
 	@include container;
 	border-bottom: solid 1px ac(lightgray);
@@ -88,7 +92,9 @@
 }
 
 
-
+//-----------
+// NEWS 
+//-----------
 #site-main .news {
 	@include container;
 	border-bottom: solid 1px ac(lightgray);
@@ -110,7 +116,9 @@
 }
 
 
-
+//-------------
+// CONTACT PAGE 
+//-------------
 #site-main .contacts-page {
 	@include container();
 	& header {
@@ -127,6 +135,9 @@
 	}
 }
 
+//-----------
+// EQUIPMENT 
+//-----------
 #site-main .equipment {
 	@include container();
 	& > header {
@@ -135,6 +146,9 @@
 }
 
 
+//-----------
+// MATERIALS 
+//-----------
 #site-main .materials {
 	@include container();
 	& > header {
@@ -157,6 +171,10 @@
 	}
 }
 
+
+//-----------
+// PRODUCTION
+//-----------
 #site-main .production {
 	@include container();
 	& > header {
@@ -168,23 +186,32 @@
 	}
 }
 
-#site-main .production-sub {
-	@include container();
-	& > header {
-		padding: 2rem;
-	}
+//-----------
+// SERVICES 
+//-----------
+
+#site-main .services {
 	&-card-wrapper {
+		@include container();
 		display: flex;
 		flex-flow: row wrap;
 	}
 }
 
-
-
 #site-main .services-sub {
-	@include container();
-	& > header {
-		padding: 2rem;
+	&-header {
+		@include container();
+		background-image: linear-gradient(to bottom, #F9F9F9, #F1F1F1);
+		& header {
+			padding: 2rem;
+			& h2 {
+				margin-top: 0;
+			}
+			& p {
+				font-size: 3rem;
+				width: percentage(6/12);
+			}
+		}
 	}
 	&-types {
 		display: flex;
@@ -218,7 +245,9 @@
 }
 
 
-//site footer
+//-----------
+// SITE-FOOTER 
+//-----------
 #site-footer {
 	background: linear-gradient(#5e5d5d, #3c3c3c)
 }

@@ -139,35 +139,37 @@
 // EQUIPMENT 
 //-----------
 #site-main .equipment {
-	@include container();
-	& > header {
-		padding: 2rem;
+	&-card-wrapper {
+		@include container();
 	}
 }
-
 
 //-----------
 // MATERIALS 
 //-----------
 #site-main .materials {
-	@include container();
-	& > header {
-		padding: 2rem;
+	&-card-wrapper {
+		@include container();
 	}
 }
 
+//-----------
+// COLORS 
+//-----------
 
 #site-main .colors {
-	@include container();
-	& > header {
-		padding: 2rem;
+	&-card-wrapper {
+		@include container();
 	}
 }
 
+//-----------
+// PORTFOLIO
+//-----------
+
 #site-main .portfolio {
-	@include container();
-	& > header {
-		padding: 2rem;
+	&-card-wrapper {
+		@include container();
 	}
 }
 
@@ -176,11 +178,8 @@
 // PRODUCTION
 //-----------
 #site-main .production {
-	@include container();
-	& > header {
-		padding: 2rem;
-	}
 	&-card-wrapper {
+		@include container();
 		display: flex;
 		flex-flow: row wrap;
 	}
@@ -199,28 +198,15 @@
 }
 
 #site-main .services-sub {
-	&-header {
-		@include container();
-		background-image: linear-gradient(to bottom, #F9F9F9, #F1F1F1);
-		& header {
-			padding: 2rem;
-			& h2 {
-				margin-top: 0;
-			}
-			& p {
-				font-size: 3rem;
-				width: percentage(6/12);
-			}
-		}
-	}
 	&-types {
+		@include container();
 		display: flex;
 		flex-flow: row wrap;		
 		justify-content: space-between;
-		padding: 2rem 0;
 		border-bottom: solid 1px ac(lightgray);
 	}
 	&-example {
+		@include container();
 		& header {
 			padding-left: 2rem;
 		}
@@ -244,6 +230,9 @@
 	}
 }
 
+#site-main .services-sub-types-single {
+	@include container();
+}
 
 //-----------
 // SITE-FOOTER 

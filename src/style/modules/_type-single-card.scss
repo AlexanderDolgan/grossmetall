@@ -1,0 +1,31 @@
+.type-single-card {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 2rem;
+	&-text {
+		width: 100%;
+		&-description {
+			margin-top: 2rem;
+			& ul {
+				margin-left: 1rem;
+				padding-left: 1.5rem;
+			}
+		}
+	}
+	&-img {
+		width: 100%;
+	}
+}
+
+@media (min-width: $b-medium) {
+	.type-single-card {
+		padding: 4rem 0;
+		&-text {
+			width: percentage(4/12);
+		}
+		&-img {
+			width: percentage(8/12);
+		}
+	}
+}

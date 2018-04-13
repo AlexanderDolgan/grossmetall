@@ -7,8 +7,49 @@
 			margin-top: 0;
 		}
 		& p {
-			font-size: 3rem;
-			width: percentage(6/12);
+			font-size: 2.2rem;
 		}
+	}
+}
+
+@media (min-width: $b-medium) {
+	.cat-top-header {
+		& header {
+			& h2 {
+				animation-name: slide-in;
+				animation-duration: .66s;
+				animation-timing-function: ease-out;
+			}
+			& p {
+				width: percentage(10/12);
+				font-size: 3rem;
+				animation-name: slide-in;
+				animation-duration: .66s;
+				animation-delay: .05s;
+				animation-timing-function: ease-out;
+			}
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	.cat-top-header {
+		& header {
+			& p {
+				width: percentage(6/12);
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+@keyframes slide-in {
+	from {
+		margin-left: 16rem;
+		color: ac(lightgray);
+	}
+	to {
+		margin-left: 0;
+		color: ac(text);
 	}
 }

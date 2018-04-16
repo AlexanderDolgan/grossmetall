@@ -1,5 +1,12 @@
-.about-item-img {
+.about-items {
+	overflow: hidden;
+}
+.about-item-img{
 	margin-top: 2rem;
+	width: 100%;
+	& .img-inner {
+		@include bg-image(55%);
+	}
 }
 
 @media (min-width: $b-medium) {
@@ -8,7 +15,7 @@
 		padding-right: 2rem;
 	}
 	.about-item-img {
-		width: percentage(6/12);
+		width: percentage(9/12);
 	}
 }
 

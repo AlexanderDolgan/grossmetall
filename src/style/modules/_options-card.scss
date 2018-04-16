@@ -1,4 +1,4 @@
-.catalogue-card {
+.options-card {
 	width: 100%;
 	padding: 2rem;
 	& a{
@@ -11,14 +11,18 @@
 		margin-top: 4rem;
 		overflow: hidden;
 	}
-	&-footer {
-		&-btn {
-			display: none;
-		}
+}
+
+.options-card-footer {
+	&-header {
+		margin-top: 2rem;
+	}
+	&-btn {
+		display: none;
 	}
 }
 
-.catalogue-card-main .img-inner {
+.options-card-main .img-inner {
 	@include bg-image(50%);
 	transition: all .33s ease-in;
 	&:hover {
@@ -27,7 +31,7 @@
 }
 
 @media (min-width: $b-medium) {
-	.catalogue-card {
+	.options-card {
 		width: percentage(6/12);
 		&-footer {
 			&-btn {

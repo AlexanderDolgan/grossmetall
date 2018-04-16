@@ -115,6 +115,49 @@
 	}
 }
 
+#site-main .news-page {
+	&-items {
+		@include container();
+		display: flex;
+		flex-flow: row wrap;
+	}
+}
+
+@media (min-width: $b-medium) {
+	#site-main .news-page .news-item {
+		width: percentage(4/12);
+	}
+}
+
+// news-single
+.news-single {
+	& header {
+		@include container($max-width: 90rem);
+		& h2 {
+			margin: 0;
+		}
+		& .date {
+			margin-top: 2rem;
+		}
+	}
+	&-hero {
+		@include container(0,0);
+		font-size: 0;
+	}
+
+	& article {
+		@include container($max-width: 90rem);
+	}
+}
+
+article {
+	font-size: 2.5rem;
+	line-height: 2;
+	& img	{
+		margin-top: 4rem;
+	}
+}
+
 
 //-------------
 // CONTACT PAGE 
@@ -182,6 +225,51 @@
 		@include container();
 		display: flex;
 		flex-flow: row wrap;
+	}
+}
+
+#site-main .production-sub {
+	&-types {
+		@include container();
+		display: flex;
+		flex-flow: row wrap;		
+		justify-content: space-between;
+		border-bottom: solid 1px ac(lightgray);
+	}
+	&-options {
+		@include container();
+		& header {
+			padding-left: 2rem;
+		}
+		&-cards {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			padding: 2rem 0;
+		}
+	}
+	&-example {
+		@include container();
+		& header {
+			padding-left: 2rem;
+		}
+		&-cards {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			padding: 2rem 0;
+		}
+	}
+}
+
+@media (min-width: $b-large) {
+	#site-main .production-sub {
+		&-types {
+			padding: 8rem 0;
+		}
+		&-example {
+			padding: 8rem 0;
+		}
 	}
 }
 

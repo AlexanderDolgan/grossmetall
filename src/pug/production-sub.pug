@@ -5,11 +5,36 @@ body
 			include partials/site-header/site-header
 
 		section#site-main
-			.production-sub
-				header
-					h2 Фасадные панели/кассеты
-					a(href="production-sigle.html") уровень ниже Типовая services-sigle.html
-					
+			.production
+				.cat-top-header
+					header
+						h2 Фасадные решения
+						p.
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ipsa placeat quaerat molestias recusandae cum maiores animi corporis facilis quae in labore impedit soluta qui vero, tempore optio id doloremque. Optio ducimus recusandae delectus.
+						a(href="production-sub-single.html") production-sub-single.html
+
+				.production-sub-types
+					include partials/type-card
+					include partials/type-card
+					include partials/type-card
+
+				.production-sub-options
+					header
+							h2 Варианты крепления
+					.production-sub-options-cards
+						include partials/options-card
+						include partials/options-card
+						include partials/options-card
+						include partials/options-card
+
+				.production-sub-example
+					header
+						h3 Сферы применения
+					.production-sub-example-cards
+						include partials/example-card
+						include partials/example-card
+						include partials/example-card
+						include partials/example-card
 
 		section#site-footer
 			include partials/site-footer

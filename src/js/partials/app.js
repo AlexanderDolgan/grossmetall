@@ -14,5 +14,4 @@ $(document).ready(function(){
 		$('body').removeClass('no-scroll');
 		$('.nav-mob').removeClass('active-nav');
 	});
-
 });

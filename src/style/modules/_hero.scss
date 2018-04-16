@@ -1,4 +1,4 @@
-#site-wrapper .hero {
+#site-main .hero {
 	@include container(0);
 	&-text {
 		padding: 0 2rem;
@@ -15,7 +15,7 @@
 }
 
 @media (min-width: $b-medium) {
-	#site-wrapper .hero {
+	#site-main .hero {
 		&-text {
 			& h2 {
 				padding: 0 2rem;
@@ -26,7 +26,7 @@
 }
 
 @media (min-width: $b-large) {
-	#site-wrapper .hero {
+	#site-main .hero {
 		padding: 0 4rem;
 		&-text {
 			margin-top: 4rem;

@@ -13,7 +13,7 @@
 		padding: 0;
 		list-style: none;
 	}
-
+	
 	.nav-screen ul li {
 		display: inline-block;
 		& a {
@@ -42,5 +42,9 @@
 			width: 80%;
 			left: 10%;
 		}
+	}
+	.nav-screen ul .current_page_item a::after {
+		width: 80%;
+		left: 10px;
 	}
 }

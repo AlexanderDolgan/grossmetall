@@ -273,6 +273,10 @@ article {
 	}
 }
 
+#site-main .production-sub-types-single {
+	@include container();
+}
+
 //-----------
 // SERVICES 
 //-----------

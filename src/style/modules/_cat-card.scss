@@ -32,7 +32,7 @@
 		@include bg-image();
 		padding-top: calc( 50% - .5rem);
 	}
-	& a:last-child {
+	& div:last-child {
 		display: block;
 		margin-top: 1rem;
 	}

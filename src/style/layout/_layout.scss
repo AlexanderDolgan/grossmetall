@@ -42,6 +42,22 @@
 }
 
 
+//-------------
+// BREADCRUMPS
+//-------------
+
+.breadcrumps {
+	@include container(2rem,2rem);
+	& p {
+		padding-left: 2rem;
+		color: ac(text);
+		& a {
+			color: ac(gray, tint, desat);
+			padding-right: 2rem;
+		}
+	}
+}
+
 //-----------
 // CATLAOGUE 
 //-----------

@@ -51,9 +51,11 @@
 	& p {
 		padding-left: 2rem;
 		color: ac(text);
+		& span {
+			padding: 0 1rem;
+		}
 		& a {
 			color: ac(gray, tint, desat);
-			padding-right: 2rem;
 		}
 	}
 }
@@ -148,7 +150,7 @@
 // news-single
 .news-single {
 	& header {
-		@include container($max-width: 90rem);
+		@include container($max-width: 128rem);
 		& h2 {
 			margin: 0;
 		}
@@ -159,10 +161,13 @@
 	&-hero {
 		@include container(0,0);
 		font-size: 0;
+		& .img-inner {
+			@include bg-image(40%);
+		}
 	}
 
 	& article {
-		@include container($max-width: 90rem);
+		@include container($max-width: 128re);
 	}
 }
 
@@ -242,6 +247,9 @@ article {
 		display: flex;
 		flex-flow: row wrap;
 	}
+	& article {
+		@include container($max-width: 120rem);
+	}
 }
 
 #site-main .production-sub {
@@ -249,7 +257,7 @@ article {
 		@include container();
 		display: flex;
 		flex-flow: row wrap;		
-		justify-content: space-between;
+		justify-content: flex-start;
 		border-bottom: solid 1px ac(lightgray);
 	}
 	&-options {
@@ -271,7 +279,7 @@ article {
 		}
 		&-cards {
 			display: flex;
-			flex-flow: row nowrap;
+			flex-flow: row wrap;
 			justify-content: space-between;
 			padding: 2rem 0;
 		}
@@ -347,4 +355,33 @@ article {
 //-----------
 #site-footer {
 	background: linear-gradient(#5e5d5d, #3c3c3c)
+}
+
+
+//------------
+// PAGE SINGLE
+// -----------
+
+// news-single
+.page-single {
+	& header {
+		@include container($max-width: 90rem);
+		& h2 {
+			margin: 0;
+		}
+		& .date {
+			margin-top: 2rem;
+		}
+	}
+	&-hero {
+		@include container(0,0);
+		font-size: 0;
+		& .img-inner {
+			@include bg-image(40%);
+		}
+	}
+
+	& article {
+		@include container($max-width: 90rem);
+	}
 }

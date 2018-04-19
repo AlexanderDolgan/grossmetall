@@ -32,17 +32,16 @@
 		@include bg-image();
 		padding-top: calc( 50% - .5rem);
 	}
-	& div:last-child {
+	& a:last-child {
 		display: block;
 		margin-top: 1rem;
 	}
 }
 
-img {
-	
-}
-
 .cat-card-description {
+	& header a {
+		color: ac(text);
+	}
 	& .content {
 		margin-top: 4rem;
 	}

@@ -1,15 +1,23 @@
 .example-card {
 	width: 100%;
 	padding: 2rem;
+	width: percentage(1/2);
 	&-description {
 		margin-top: 2rem;
 		color: ac(text);
 	}
 }
 
+.example-card .img-inner {
+	@include bg-image(100%);
+	transition: all .33s ease-in;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
 @media (min-width: $b-medium) {
 	.example-card {
 		width: percentage(1/4);
-		max-width: 38rem;
 	}	
 }

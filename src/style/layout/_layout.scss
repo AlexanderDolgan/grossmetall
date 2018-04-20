@@ -167,7 +167,7 @@
 	}
 
 	& article {
-		@include container($max-width: 128re);
+		@include container($max-width: 128rem);
 	}
 }
 
@@ -310,6 +310,9 @@ article {
 		@include container();
 		display: flex;
 		flex-flow: row wrap;
+	}
+	& article {
+		@include container($max-width: 128rem);
 	}
 }
 

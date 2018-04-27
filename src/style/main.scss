@@ -5,6 +5,15 @@ Author URI:
 Version: 1.0
 */
 
+@font-face {
+	font-family: 'geometria';
+	src: url('/fonts/Geometria-Bold-webfont.eot') format('eot');
+	src: url('/fonts/Geometria-Bold-webfont.woff') format('woff'),
+			 url('/fonts/Geometria-Bold-webfont.ttf') format('true type');
+	font-weight: normal;
+	font-style: normal;
+}
+
 //settings-var
 @import "util/settings";
 @import "util/mixin";

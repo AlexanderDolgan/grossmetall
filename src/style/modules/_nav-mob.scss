@@ -1,19 +1,20 @@
 // основная навигация мобильная версия
 .nav-mob {
+	display: flex;
 	position: fixed;
-	display: none;
 	min-height: 100vh;
 	min-width: 100vw;
 	top: 0;
-	left: 0;
+	left: -100vw;
 	background-color: ac(white);
+	transition: .33s left ease-in-out;
 	z-index: 9999;
 }
 
 .nav-mob ul {
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: space-around;
+	justify-content: center;
 	list-style: none;
 	padding: 2rem	0;
 	margin: 0;
@@ -30,11 +31,11 @@
 	}
 }
 
-@media (min-width: $b-large) {
+@media (min-width: $b-medium) {
 	.nav-mob {
 		width: percentage(4/12);
 		min-width: auto;
-		box-shadow: 1rem 1rem 2rem rgba(0,0,0,.2);
+		box-shadow: .2rem 0 .2rem rgba(0,0,0,.05);
 	}
 	.nav-mob ul {
 		padding: 5rem 0;
@@ -47,8 +48,10 @@
 }
 
 .active-nav {
-	display: flex;
+	left: 0;
 }
+
+
 
 .no-scroll {
 	overflow: hidden;
@@ -107,7 +110,7 @@
 	cursor: pointer;
 }
 
-@media (min-width: $b-xlarge) {
+@media (min-width: $b-large) {
 	.nav-open-btn {
 		display: none;
 	}

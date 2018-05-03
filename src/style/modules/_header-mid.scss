@@ -10,26 +10,29 @@
 }
 
 @media (min-width: $b-medium) {
-	#site-header .header-mid{
+	#site-header .header-mid {
 		& .logo {
-			width: percentage($number: 3/12);
+			width: percentage(3/12);
 		}
 		& .nav {
-			width: percentage($number: 1/12);
+			width: percentage(1/12);
 		}
 	}
 }
 
-@media (min-width: $b-xlarge) {
-	#site-header .header-mid{
-		padding: 4rem 2rem;
+@media (min-width: $b-large) {
+	#site-header .header-mid {
+		padding: 4rem;
 		justify-content: space-between;
 		& .logo {
-			max-width: percentage($number: 2/12);
+			max-width: percentage(2/12);
 		}
 		& .nav {
 			width: 100%;
 			text-align: right;
 		}
+	}
+	body.down #site-header .clone {
+		padding: 2rem 4rem;
 	}
 }

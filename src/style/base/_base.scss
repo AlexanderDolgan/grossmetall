@@ -11,6 +11,7 @@ html {
 }
 
 body {
+	position: relative;
 	font-size: $body-font-size;
 	font-family: $global-font-family;
 	line-height: $global-line-height;

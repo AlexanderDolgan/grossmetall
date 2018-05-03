@@ -2,7 +2,7 @@
 	display: none;
 }
 
-@media (min-width: $b-xlarge) {
+@media (min-width: $b-large) {
 	.nav-screen {
 	display: block;
 	}
@@ -32,9 +32,9 @@
 				position: absolute;
 				display: block;
 				bottom: 0;
-				left: 10%;
+				left: 50%;
 				width: 0;
-				border-bottom: .3rem solid ac(secondary);
+				border-bottom: .2rem dotted ac(secondary);
 				transition: width .33s ease-in, left, .33s;
 			}
 		}

@@ -1,11 +1,21 @@
-.is-scale-1x {
-	transform: scale(1);
+#site-header .clone {
+	position: fixed;
+  top: 0;
+	min-width: 100%;
+	background-color: ac(white);
+	z-index: 999;
+	transform: translateY(-100%);
+	opacity: 0.01;
+	transition: .33s transform cubic-bezier(.3,.73,.3,.74),
+							.33s box-shadow cubic-bezier(.3,.73,.3,.74),
+							.33s opacity ease-in;
+	& .logo {
+		max-width: 10%;
+	}
 }
 
-.is-opacity {
+body.down #site-header .clone {
+	transform: translateY(0);
+	box-shadow: 0 .5rem .5rem rgba(0,0,0,.1);
 	opacity: 1;
-}
-
-.is-desaturate {
-	color: mix(white, ac(text), 50%);	
 }

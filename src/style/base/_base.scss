@@ -13,7 +13,6 @@ html {
 body {
 	position: relative;
 	font-size: $body-font-size;
-	font-weight: $body-font-weight;
 	font-family: $global-font-family;
 	line-height: $global-line-height;
 	background-color: $body-background;
@@ -61,7 +60,6 @@ h3,
 h4,
 h5,
 h6 {
-	display: inline-block;
 	font-family: $header-font-family;
 	font-weight: $header-font-weight;
 	color: $header-color;

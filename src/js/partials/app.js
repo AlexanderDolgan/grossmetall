@@ -39,16 +39,4 @@ $(document).ready(function(){
 		$('body').toggleClass("down", (fromTop > 200));
 	});
 
-	var settings = {
-		duration: 500,
-		origin: 'top',
-		reset: true,
-		distance: '1rem',
-		scale: .9,
-		viewFactor: 0.5,
-	}
-
-	window.sr = ScrollReveal();
-	sr.reveal('div', settings, 50);
-	
 });

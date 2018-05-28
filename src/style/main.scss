@@ -7,11 +7,14 @@ Version: 1.0
 
 @font-face {
 	font-family: 'geometria';
-	src: url('/fonts/Geometria-Bold-webfont.eot') format('eot');
-	src: url('/fonts/Geometria-Bold-webfont.woff') format('woff'),
-			 url('/fonts/Geometria-Bold-webfont.ttf') format('true type');
+	src: url('/fonts/geometria-webfont.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+}
+
+@font-face {
+	font-family: 'geometria-bold';
+	src: url('/fonts/geometria-Bold-webfont.woff') format('woff');
+	font-weight: bold;
 }
 
 //settings-var

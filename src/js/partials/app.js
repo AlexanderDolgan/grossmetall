@@ -30,13 +30,13 @@ $(document).ready(function(){
 	});
 
 
-	//sticky navigation
-	var $header = $('.header-mid'),
-	$clone = $header.before($header.clone().addClass("clone"));
+	// //sticky navigation
+	// var $header = $('.header-mid'),
+	// $clone = $header.before($header.clone().addClass("clone"));
 
-	$(window).on('scroll', function() {
-		var fromTop = $('body').scrollTop();
-		$('body').toggleClass("down", (fromTop > 200));
-	});
+	// $(window).on('scroll', function() {
+	// 	var fromTop = $('body').scrollTop();
+	// 	$('body').toggleClass("down", (fromTop > 200));
+	// });
 
 });

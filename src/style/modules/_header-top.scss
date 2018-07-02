@@ -8,6 +8,7 @@
 	justify-content: space-between;
 	@include container($max-width: $b-xxlarge);
 	padding: 0 2rem;
+	z-index: 999;
 }
 
 .header-top .logo {

@@ -1,48 +1,32 @@
 // основная навигация мобильная версия
-.nav-mob {
-	display: flex;
+#nav-mob {
 	position: fixed;
-	min-height: 100vh;
-	min-width: 100vw;
+	height: 100%;
+	width: 46.875rem;
 	top: 0;
-	left: -100vw;
+	right: -46.875rem;
 	background-color: ac(white);
-	transition: .33s left ease-in-out;
-	z-index: 9999;
+	overflow-x: hidden;
+	transition: .33s right ease-in-out;
+	z-index: 9999999;
 }
 
-.nav-mob ul {
+#nav-mob ul {
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
 	list-style: none;
-	padding: 2rem	0;
+	padding: 6rem	0;
 	margin: 0;
 	width: 100%;
 	& li {
 		display: block;
 		& a {
 			display: block;
-			padding: 2rem;
+			padding: 1.75rem 4rem;
 			color: ac(text);
-			font-size: 3rem;
+			font-size: 2.5rem;
 			width: 100%;
-		}
-	}
-}
-
-@media (min-width: $b-medium) {
-	.nav-mob {
-		width: percentage(4/12);
-		min-width: auto;
-		box-shadow: .2rem 0 .2rem rgba(0,0,0,.05);
-	}
-	.nav-mob ul {
-		padding: 5rem 0;
-		& li {
-			& a {
-				font-size: 3rem;
-			}
 		}
 	}
 }
@@ -56,40 +40,40 @@
 }
 
 .active-nav li:nth-child(1) {
-	animation-delay: .15s;
-}
-.active-nav li:nth-child(2) {
-	animation-delay: .2s;
-}
-.active-nav li:nth-child(3) {
 	animation-delay: .25s;
 }
-.active-nav li:nth-child(4) {
+.active-nav li:nth-child(2) {
 	animation-delay: .3s;
 }
-.active-nav li:nth-child(5) {
+.active-nav li:nth-child(3) {
 	animation-delay: .35s;
 }
-.active-nav li:nth-child(6) {
+.active-nav li:nth-child(4) {
 	animation-delay: .4s;
 }
-.active-nav li:nth-child(7) {
+.active-nav li:nth-child(5) {
 	animation-delay: .45s;
 }
-.active-nav li:nth-child(8) {
+.active-nav li:nth-child(6) {
 	animation-delay: .5s;
 }
+.active-nav li:nth-child(7) {
+	animation-delay: .55s;
+}
+.active-nav li:nth-child(8) {
+	animation-delay: .6s;
+}
 .active-nav li:nth-child(9) {
-	animation-delay: .5s;
+	animation-delay: .65s;
 }
 
 @keyframes fade-left {
 	0% {
-		margin-left: -1rem;
+		margin-left: -4rem;
 		opacity: 0;
 	}
 	100% {
-		margin-left: 2rem;
+		margin-left: 0;
 		opacity: 1;
 	}
 }
@@ -115,7 +99,7 @@
 	}
 }
 
-.nav-mob .close-btn {
+#nav-mob .close-btn {
 	@include retina-sprite($ic-close-group);
 	cursor: pointer;
 	position: absolute;

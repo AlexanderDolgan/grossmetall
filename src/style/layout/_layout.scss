@@ -14,22 +14,21 @@
 }
 
 //site header
-#site-header .header-top {
-	position: relative;
-	background-color: ac(lightgray);
-	text-align: center;
-	line-height: 2;
+
+#site-header {
+	min-height: 100vh;
+	width: 100vw;
 }
+
 @media (min-width: $b-large) {
 	#site-header .header-top {
-		text-align: right;
+
 	}
 }
 
 @media (min-width: $b-xlarge) {
 	#site-header .header-top {
-		background-color: ac(white);
-		text-align: right;
+
 	}
 }
 

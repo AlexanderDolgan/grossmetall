@@ -1,21 +1,21 @@
-.header-top
-	.container
-		a(href="tel:8-800-545-12-34") 8-800-545-12-34
-		a(href="#") en
+header
+	.header-top
+		.logo
+			a(href="index.html")
+				//- logo
+				img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
+		
+		.nav
+			.nav-open-btn
+				span Навигация
+					.nav-icon
 
-.header-mid
-	a(href="index.html").logo
-		//- logo
-		img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
-	.nav
-		//- mobile navigarion full screen 
-		include nav-mob
-		#nav-open-btn.nav-open-btn
-		include nav-screen
+			include nav-mob
+			include nav-screen
 
-.breadcrumbs
-	p#breadcrumbs
-		span
-			span
-				a(href="#") Главная
-			span Главная
+		.phone-language
+			a(href="tel:8-800-545-12-34") 8-800-545-12-34
+			a(href="#") en
+
+	.hero
+		include hero-item

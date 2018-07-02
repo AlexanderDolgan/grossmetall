@@ -1,38 +1,50 @@
-#site-main .hero {
-	@include container(0);
-	&-text {
-		padding: 0 2rem;
-		margin-top: 2rem;	
-		h2 {
-			// display: none;
-			margin-bottom: 0;
-			font-weight: normal;
-			// text-align: center;
-			font-size: 3rem;
-			line-height: 1.5;
-		}
+.hero {
+	width: 100%;
+	height: 100%;
+}
+
+.hero-item {
+	min-height: 100vh;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	background-image: url('../img/hero-bg.jpg');
+	background-size: cover;
+background-position: center;
+}
+
+.hero-item-content {
+	@include container(0, 0, $b-xlarge);
+	width: 100%;
+	& h1 {
+		font-size: 5.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	& h3 {
+		margin-top: 2rem;
+	}
+	& button {
+		margin-top: 4rem;
+	}
+	&-nav {
+		margin-top: 10rem;
 	}
 }
 
-@media (min-width: $b-medium) {
-	#site-main .hero {
-		&-text {
-			& h2 {
-				padding: 0 2rem;
-				font-size: 4rem;
-			}
-		}
+.hero-nav-icon {
+	display: inline-block;
+	margin-left: 1rem;
+	&-left {
+		@include retina-sprite($ic_chevron_left-group);
+	}
+	&-right {
+		@include retina-sprite($ic_chevron_right-group);
 	}
 }
 
-@media (min-width: $b-large) {
-	#site-main .hero {
-		padding: 0 4rem;
-		&-text {
-			margin-top: 4rem;
-			& h2 {
-				padding: 0 2rem;
-			}
-		}
+@media (max-height: 60rem) {
+	.hero-item-content {
+		margin-top: 10rem;
 	}
 }

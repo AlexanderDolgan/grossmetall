@@ -4,13 +4,14 @@
 $global-font-family: 'Roboto', sans-serif;
 $second-font-family: 'geometria', sans-serif;
 $global-font-size: 8px;
+$global-font-weight: 300;
 $body-font-size: 1.75rem;
 $global-line-height: 1.5;
 $font-smooth: antialiased;
 
 //Colors
 $colors: (
-	primary: hsl(0,0,0),
+	primary: hsl(212,73,60),
 	secondary: hsl(212,73,60),
 	third: hsl(309,100,80),
 	accept: hsl(90,77,60),

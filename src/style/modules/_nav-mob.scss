@@ -47,16 +47,6 @@
 	}
 }
 
-.active-nav {
-	left: 0;
-}
-
-
-
-.no-scroll {
-	overflow: hidden;
-}
-
 .active-nav li{
 	animation-name: fade-left;
 	animation-duration: .3s;
@@ -106,8 +96,17 @@
 
 // nav open btn
 .nav-open-btn {
-	@include retina-sprite($bars-group);
 	cursor: pointer;
+	& span {
+		font-size: 1.75rem;
+	}
+}
+
+.nav-icon {
+	display: inline-block;
+	vertical-align: middle;
+	@include retina-sprite($ic_menu-2-group);
+	margin-left: 1rem;
 }
 
 @media (min-width: $b-large) {
@@ -124,7 +123,4 @@
 	top: 2rem;
 	transition: transform .3s ease-in-out;
 	z-index: 999999;
-	&:hover {
-		transform: rotate(10deg);
-	}
 }

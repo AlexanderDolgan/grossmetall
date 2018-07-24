@@ -1,19 +1,23 @@
 header
 	.header-top
-		.logo
-			a(href="index.html")
-				//- logo
-				img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
-		
-		.nav
-			.nav-open-btn(onclick='openNav()')
-				span Навигация
-					.nav-icon
-			include nav-screen
-
-		.phone-language
-			a(href="tel:8-800-545-12-34") 8-800-545-12-34
-			a(href="#") en
+		.wrapper
+			.logo
+				a(href="index.html")
+					//- logo
+					img( src="./img/assets/brand/logo-b.png", srcset="./img/assets/brand/logo-b@2x.png", alt="Grossmetall")
+			
+			.nav
+				.nav-open-btn(onclick='openNav()')
+					span Навигация
+						.nav-icon
+				include nav-screen
+			
+			.phone-language
+				a(href="tel:88005451234").phone 8 (800) 545-12-34
+				a(href="mailto:info@grossmetall.com").mail info@grossmetall.com
+			
 
 	.hero
+		include hero-item
+		include hero-item
 		include hero-item

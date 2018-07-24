@@ -1,4 +1,4 @@
-.cat-top-header {
+	.cat-top-header {
 	@include container();
 	background-image: linear-gradient(to bottom, #F9F9F9, #F1F1F1);
 	& header {
@@ -21,8 +21,6 @@
 				animation-timing-function: ease-out;
 			}
 			& p {
-				width: percentage(10/12);
-				font-size: 3rem;
 				animation-name: slide-in;
 				animation-duration: .66s;
 				animation-delay: .05s;
@@ -37,7 +35,6 @@
 		& header {
 			& p {
 				width: percentage(6/12);
-				font-size: 3rem;
 			}
 		}
 	}

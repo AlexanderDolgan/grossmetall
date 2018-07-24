@@ -8,7 +8,14 @@
 	background-color: ac(white);
 	overflow-x: hidden;
 	transition: .33s right ease-in-out;
-	z-index: 9999999;
+	z-index: 2;
+}
+
+@media (max-width: 374px) {
+	#nav-mob {
+		width: 100%;
+		right: -100%;
+	}
 }
 
 #nav-mob ul {
@@ -16,7 +23,7 @@
 	flex-flow: column nowrap;
 	justify-content: center;
 	list-style: none;
-	padding: 6rem	0;
+	padding: 2rem	0;
 	margin: 0;
 	width: 100%;
 	& li {
@@ -31,7 +38,7 @@
 	}
 }
 
-.active-nav li{
+.active-nav li {
 	animation-name: fade-left;
 	animation-duration: .3s;
 	animation-timing-function: ease-out;
@@ -106,5 +113,5 @@
 	right: 2rem;
 	top: 2rem;
 	transition: transform .3s ease-in-out;
-	z-index: 999999;
+	z-index: 999;
 }

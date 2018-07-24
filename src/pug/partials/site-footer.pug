@@ -1,37 +1,62 @@
-.footer-navigation
-	.footer-navigation-item
-		.footer-nav
-			h4 Навигация
-			ul
-				li
-					a(href="#") Главная
-				li
-					a(href="") Продукция
-				li
-					a(href="") Оборудование
-				li
-					a(href="") Цвет
-				li
-					a(href="") Материалы
-				li
-					a(href="") Контакты
+.site-footer
+	.site-footer-item.site-footer-item-nav
+		h4 Разделы
+		ul
+			li
+				a(href="#") Главная
+			li
+				a(href="") Продукция
+			li
+				a(href="") Оборудование
+			li
+				a(href="") Цвет
+			li
+				a(href="") Материалы
+			li
+				a(href="") Контакты
 
-	.footer-navigation-item
+	.site-footer-item.site-footer-item-contacts
 		h4 Контакты
 		address
-			a(href="#") Адрес: г. Москва, Тверская, 36
-			a(href="#") Телефон: +7 (495) 765-52-56
-			a(href="#") e-mail: info@grossmetall.ru
+			span Адрес: 
+				a(href="https://yandex.ru/maps/-/CBurIDbfHA") 115035, г. Москва, Садовническая уд., д. 76/71, стр. 1, пом. I, ком. 7;9
+			span Телефон: 
+				a(href="tel:84957655256") +7 (495) 215-54-53
+			span e-mail:
+				a(href="mailto:info@grossmetall.ru") info@grossmetall.ru
 		
 		.social
-			.soc-item.fb
-			.soc-item.in
+			a(href="#")
+				.soc-item.fb
+			a(href="#")
+				.soc-item.in
+
+	.site-footer-item.site-footer-item-feedback
+		h4 Напишите нам
+			form
+				p
+					//- label(for="user-name") Имя
+					input(type="text", name="user-name" placeholder="Имя")
+				p
+					//- label(for="user-email") E-mail
+					input(type="text", name="user-email" placeholder="E-mail")
+				p
+					//- label(for="user-message") Сообщение
+					textarea(name="user-message" rows="4" placeholder="Сообщение")
+				
+				button(type="submit").btn.btn-small Отправить
+
+	.site-footer-item.site-footer-item-search
+		h4 Поиск по сайту
+		form
+			p
+				input(type="text", name="user-name" placeholder="поиск по сайту")
+			
+			button(type="submit").btn.btn-small Поиск
 
 .copyright
 	.copyright-inner Москва 2018
 
-	script(src="//unpkg.com/scrollreveal/dist/scrollreveal.min.js")
+	script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU")
 	script(src="./js/main.min.js")
-	//- script(src="//code.jquery.com/jquery-1.11.0.min.js")
-	//- script(src="//code.jquery.com/jquery-migrate-1.2.1.min.js")
-	//- script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js")

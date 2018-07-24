@@ -16,28 +16,12 @@
 //site header
 
 #site-header {
-	min-height: 100vh;
-	width: 100vw;
-}
-
-@media (min-width: $b-large) {
-	#site-header .header-top {
-
+	height: 100%;
+	width: 100%;
+	& header {
+		width: 100%;
+		height: 100%;
 	}
-}
-
-@media (min-width: $b-xlarge) {
-	#site-header .header-top {
-
-	}
-}
-
-#site-header .header-mid {
-	@include container;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-between;
-	align-items: center;
 }
 
 
@@ -46,15 +30,17 @@
 //-------------
 
 .breadcrumbs {
-	@include container(2rem,2rem);
+	@include container(0,0);
 	& p {
+		padding-top: 0;
+		margin-top: 0;
 		padding-left: 2rem;
 		color: ac(text);
 		& span {
-			padding: 0 1rem;
-		}
-		& a {
-			color: ac(gray, tint, desat);
+			font-size: 1.5rem;
+			& a {
+				color: ac(gray, tint, desat);
+			}
 		}
 	}
 }
@@ -187,18 +173,17 @@ article {
 //-------------
 #site-main .contacts-page {
 	@include container();
-	& header {
-		padding: 2rem;
-	}
-	& .contacts {
-		display: flex;
-		flex-flow: row wrap;
-		margin-top: 2rem;
-	}
-	& .map {
-		padding: 2rem;
-		margin-top: 2rem;
-	}
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+//-------------
+// SEARCH PAGE
+//-------------
+#site-main .search-page {
+	@include container();
+	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 //-----------
@@ -359,7 +344,7 @@ article {
 // SITE-FOOTER 
 //-----------
 #site-footer {
-	background: linear-gradient(#5e5d5d, #3c3c3c)
+	background-color: lighten(ac(lightgray), 7%);
 }
 
 

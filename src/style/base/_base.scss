@@ -79,27 +79,15 @@ h5 {font-size: 14px;}
 h6 {font-size: 14px;}
 
 h2 {
-	position: relative;
+	font-family: $header-font-family;
+	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
-	font-size: 32px;
-	margin: 2rem 0;
+	font-size: 4rem;
+	margin: 1rem 0;
 	@media (min-width: $b-medium) {
-		font-size: 40px;
-		margin: 6rem 0;
-		
+		margin: 3rem 0;
 	}
-	&:before {
-    content: attr(data);
-    position: absolute;
-    left: -.03em;
-    top: .03em;
-    color: #ccc;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAFUlEQVQIW2NkQAKMIPZ/IGAEAWQZAE5lBATogF4qAAAAAElFTkSuQmCC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    z-index: -1;
-  }
 }
 
 //Bloquote

@@ -1,30 +1,74 @@
 //верхняя линия с телефоном горячей линии и переключением языка
 .header-top {
+	width: 100%;
 	position: fixed;
-	top: 2rem;
-	display: flex;
-	flex-flow: row nowrap;
-	align-items: center;
-	justify-content: space-between;
-	@include container($max-width: $b-xxlarge);
-	padding: 0 2rem;
-	z-index: 999;
-}
-
-.header-top .logo {
-	width: percentage(4/12);
-	& img {
-		display: block;
-		max-width: 20.5rem;
+	transition: .33s background-color ease-in-out;
+	z-index: 1;
+	& .wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		justify-content: space-between;
+		@include container($pad-vert-small:1rem, $pad-vert:2rem, $max-width: $b-xlarge);
+		padding-left: 1rem;
+		padding-right: 1rem;
+		transition: .33s padding ease-in-out;
+		& .logo {
+			& img {
+				max-width: 12rem;
+				display: block;
+			}
+		}
+		& .phone-language {
+			display: none;
+		}
 	}
 }
 
-.header-top .phone-language {
-	display: none;
+.header-top-inside {
+	position: relative;
 }
 
-@media (min-width: $b-large) {
-	.nav-open-btn {
-		display: none;
-	}	
+@media (min-width: $b-medium) {
+	.header-top { 
+		padding: 1rem;
+		& .wrapper {
+			& .logo {
+				& img {
+					max-width: 15rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: $b-xlarge) {
+	.header-top { 
+		& .wrapper {
+			& .phone-language {
+				display: block;
+				text-align: right;
+				& a {
+					display: block;
+					color: ac(text);
+					font-size: 1.5rem;
+					font-weight: 600;
+				}
+				// & .phone::before {
+				// 	content: '';
+				// 	display: inline-block;
+				// 	vertical-align: middle;
+				// 	margin-right: .5rem;
+				// 	@include retina-sprite($ic-phone-android-group);
+				// }
+				// & .mail::before {
+				// 	content: '';
+				// 	display: inline-block;
+				// 	vertical-align: middle;
+				// 	margin-right: .5rem;
+				// 	@include retina-sprite($ic-local-post-office-group);
+				// }
+			}
+		}
+	}
 }

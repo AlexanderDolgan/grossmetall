@@ -8,7 +8,7 @@
 }
 
 //container mixin with max width
-@mixin container ($pad-vert-small:4rem, $pad-vert:8rem, $max-width: $b-xlarge) {
+@mixin container ($pad-vert-small:2rem, $pad-vert:4rem, $max-width: $b-xlarge) {
 	width: 100%;
 	max-width: $max-width;
 	margin: 0 auto;

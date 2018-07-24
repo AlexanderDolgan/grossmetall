@@ -19,10 +19,12 @@
 		& a {
 			position: relative;
 			display: block;
-			padding: .5rem 1.5rem;
+			padding: .5rem 1rem;
 			color: ac(text);
 			transition: color .2s ease-in;
+			font-size: 1.5rem;
 			font-weight: 600;
+			text-transform: uppercase;
 			&:hover {
 				text-decoration: none;
 				color: ac(secondary);

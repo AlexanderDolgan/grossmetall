@@ -10,26 +10,41 @@ body
 					h2 Контакты
 				.contacts
 					.contacts-item
-						h4 Офис в Москве:
-						address
-							a(href="#") Адрес: г. Москва, Тверская, 36
-							a(href="#") Телефон: +7 (495) 765-52-56
-							a(href="#") e-mail: info@grossmetall.ru
+						.contacts-item-left
+							h3 Офис в Москве:
+							address
+								span Адрес: 
+									a(href="https://yandex.ru/maps/-/CBurIDbfHA") 115035, г. Москва, Садовническая уд., д. 76/71, стр. 1, пом. I, ком. 7;9
+								span Телефон: 
+									a(href="tel:84957655256") +7 (495) 215-54-53
+								span e-mail:
+									a(href="mailto:info@grossmetall.ru") info@grossmetall.ru
 						
-						.social
-							.soc-item.fb
-							.soc-item.in
+							.social
+								a(href="#")
+									.soc-item.fb
+								a(href="#")
+									.soc-item.in
+
+						.contacts-item-right
+							.map
+								#map
 					
 					.contacts-item
-						h4 Производсвто:
-						address
-							a(href="#") Адрес: г. Москва, Тверская, 36
-							a(href="#") Телефон: +7 (495) 765-52-56
-							a(href="#") e-mail: info@grossmetall.ru
+						.contacts-item-left
+							h3 Производство:
+							address
+								span Адрес: 
+									a(href="https://yandex.ru/maps/-/CBurIOS1XC") 143360, М.О., Наро-Фоминский район, г. Апрелевка, ул. Августовская, д.1
+								span Телефон: 
+									a(href="tel:84957655256") +7 (495) 215-54-53
+								span e-mail:
+									a(href="mailto:info@grossmetall.ru") info@grossmetall.ru
+						
+						.contacts-item-right
+							.map
+								#map2
 
-				.map
-					.map-img
-						img(src="//placehold.it/1280x504", alt="contacts map")
 
 		section#site-footer
 			include partials/site-footer

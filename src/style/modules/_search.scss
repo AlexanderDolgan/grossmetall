@@ -1,0 +1,26 @@
+.search-result {
+}
+.search-result-item {
+	max-width: 90rem;
+	margin-top: 2rem;
+	& a{
+		color: ac(text);
+		&:hover, &:active, &:focus {
+			color: ac(text);
+			text-decoration: none;
+		}
+	}
+	&  .post-img {
+		margin-top: 2rem;
+		overflow: hidden;
+	}
+}
+
+
+.search-page .img-inner {
+	@include bg-image(40%);
+	transition: all .33s ease-in;
+	&:hover {
+		transform: scale(1.05);
+	}
+}

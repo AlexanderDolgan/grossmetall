@@ -1,6 +1,9 @@
 .catalogue-card {
 	width: 100%;
 	padding: 2rem;
+	& h3 {
+		font-weight: bold;
+	}
 	& a{
 		color: ac(text);
 		&:hover, &:active, &:focus {
@@ -8,7 +11,7 @@
 		}
 	}
 	&-main {
-		margin-top: 4rem;
+		margin-top: 2rem;
 		overflow: hidden;
 	}
 	&-footer {

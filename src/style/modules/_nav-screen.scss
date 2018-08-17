@@ -12,41 +12,42 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		& .current-menu-item::after {
+			width: calc( 100% - 2rem );
+			left: 1rem;
+		}
 	}
 	
 	.nav-screen ul li {
+		position: relative;
 		display: inline-block;
-		& a {
-			position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
 			display: block;
-			padding: .5rem 1rem;
+			bottom: 0;
+			width: 0;
+			border-bottom: .2rem dotted ac(secondary);
+			transition: width .24s ease-in, left, .24s;
+		}
+		&:hover::after {
+			width: calc( 100% - 2rem );
+			left: 1rem;
+		}
+		& a {
+			display: block;
+			padding: 0.5rem 1rem;
 			color: ac(text);
 			transition: color .2s ease-in;
 			font-size: 1.5rem;
 			font-weight: 600;
 			text-transform: uppercase;
-			&:hover {
+			&:hover, &:active, &:focus {
 				text-decoration: none;
 				color: ac(secondary);
 			}
-			&::after {
-				content: '';
-				position: absolute;
-				display: block;
-				bottom: 0;
-				left: 50%;
-				width: 0;
-				border-bottom: .2rem dotted ac(secondary);
-				transition: width .33s ease-in, left, .33s;
-			}
-		}
-		&:hover a::after {
-			width: 80%;
-			left: 10%;
 		}
 	}
-	.nav-screen ul .current_page_item a::after {
-		width: 80%;
-		left: 10px;
-	}
+	
 }

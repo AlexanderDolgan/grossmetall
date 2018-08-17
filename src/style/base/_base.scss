@@ -26,10 +26,10 @@ body {
 	height: 100%;
 }
 
-img {
-	width: 100%;
-	height: auto;
-}
+// img {
+// 	width: 100%;
+// 	height: auto;
+// }
 
 a {
 	text-decoration: none;
@@ -88,6 +88,10 @@ h2 {
 	@media (min-width: $b-medium) {
 		margin: 3rem 0;
 	}
+}
+
+h3 {
+	font-weight: bold;
 }
 
 //Bloquote

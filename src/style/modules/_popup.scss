@@ -1,4 +1,13 @@
-.pum-content p a {
-	color: currentColor !important;
-	text-decoration: underline;
+.accept_links {
+	& span {
+		margin-left: 0;
+		// padding-left: 1rem;
+	}
+	& [type = checkbox] {
+		display: inline-block;
+		width: 2rem;
+	}
+	& a {
+		color: ac(text);
+	}
 }

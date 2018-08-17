@@ -2,6 +2,7 @@
 	padding: 2rem;
 	margin-top: 2rem;
 	&-header {
+		min-height: 10rem;
 		& a {
 			color: ac(text);
 		}

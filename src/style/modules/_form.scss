@@ -9,3 +9,80 @@ input {
 textarea {
 	@extend input;
 }
+
+.form-doc {
+	& h3 {
+		margin-bottom: 0;
+		font-size: 3.5rem;
+	}
+	& h4 {
+		margin-top: 1rem;
+	}
+	&-content {
+		& input {
+			max-width: 40rem;
+			padding: 1rem 1.5rem;
+			font-size: 2rem;
+		}
+		& input[type="submit"] {
+			position: relative;
+			font-size: 1.75rem;
+			font-weight: 500;
+			letter-spacing: .1rem;
+			text-transform: uppercase;
+			padding: 2rem 3rem;
+			background-color: ac(white);
+			border: none;
+			box-shadow: 0 0 1rem rgba(0,0,0,.1);
+			transition: box-shadow .33s ease-in-out,
+			background-color .1s ease-in-out;
+			&:hover,
+			&:focus {
+				box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+			}
+		}
+		& .ajax-loader {
+			position: absolute;
+			right: 1rem;
+		}
+	}
+}
+
+.wpcf7 {
+	
+	& input {
+		padding: 1rem;
+		font-size: 1.5rem;
+		border: none;
+		border: solid 1px ac(lightgray);
+		width: 100%;
+	}
+	& input {
+		max-width: 40rem;
+		padding: 1rem 1.5rem;
+		font-size: 2rem;
+	}
+	& .wpcf7-submit {
+		position: relative;
+		color: ac(white);
+		padding: 2rem 3rem;
+		font-size: 1.75rem;
+		font-weight: 500;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		background-color: ac(primary);
+		border: none;
+		box-shadow: 0 0 1rem rgba(0,0,0,.1);
+		transition: box-shadow .33s ease-in-out,
+		background-color .1s ease-in-out;
+		&:hover,
+		&:focus {
+			box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+		}
+		&[disabled] {
+			background-color: ac(white);
+			color: currentColor;
+		}
+	}
+
+}

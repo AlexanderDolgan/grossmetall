@@ -3,7 +3,7 @@
 	width: 100%;
 	position: fixed;
 	transition: .33s background-color ease-in-out;
-	z-index: 1;
+	z-index: 5;
 	& .wrapper {
 		display: flex;
 		flex-flow: row nowrap;

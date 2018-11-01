@@ -2,6 +2,14 @@
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	& .darkframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.45);
+	}
 }
 
 .hero-item {
@@ -18,12 +26,12 @@
 	@include container(0, 0, $b-xlarge);
 	& h1 {
 		font-size: 5.5rem;
-		font-family: 'geometria-bold', sans-serif;
-		text-transform: uppercase;
 		max-width: 58rem;
+		color: white;
 	}
 	& h3 {
 		margin-top: 2rem;
+		color: white;
 	}
 	& button {
 		margin-top: 4rem;
@@ -41,8 +49,23 @@
 	}
 }
 
+@media (max-width: $b-medium) {
+	.hero-item-content {
+		& span {
+			color: white;
+			display: inline-block;
+			background-color: black;
+			padding: 1rem;
+		}
+	}
+}
+
 @media (min-width: $b-medium) {
 	.hero-item-content {
+		& span {
+			background-color: transparent;
+			padding: 0;
+		}
 		& h1 {
 			font-size: 8rem;
 			margin-top: 15rem;

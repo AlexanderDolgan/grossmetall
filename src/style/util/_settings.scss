@@ -2,7 +2,7 @@
 
 //Global
 $global-font-family: 'Roboto', sans-serif;
-$second-font-family: 'geometria', sans-serif;
+$second-font-family: 'Montserrat', sans-serif;
 $global-font-size: 8px;
 $global-font-weight: 300;
 $body-font-size: 1.75rem;
@@ -12,7 +12,7 @@ $font-smooth: antialiased;
 //Colors
 $colors: (
 	primary: hsl(212,73,60),
-	secondary: hsl(212,73,60),
+	secondary: hsl(197, 100, 47),
 	third: hsl(309,100,80),
 	accept: hsl(90,77,60),
 	alert: hsl(0,77,60),
@@ -51,6 +51,6 @@ $container: $b-xlarge;
 $paragraph-lineheight: 1.5;
 
 $header-font-family: $second-font-family;
-$header-font-weight: normal;
+$header-font-weight: 400;
 $header-color: $body-font-color;
 $header-lineheight: 1.2;

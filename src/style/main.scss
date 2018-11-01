@@ -5,17 +5,15 @@ Author URI:
 Version: 1.0
 */
 
-@font-face {
-	font-family: 'geometria';
-	src: url('../fonts/Geometria.otf') format('woff');
-	font-weight: normal;
-}
+// @font-face {
+// 	font-family: 'geometria';
+// 	src: url('../fonts/Geometria.otf') format('woff');
+// 	font-weight: normal;
+// }
 
-@font-face {
-	font-family: 'geometria-bold';
-	src: url('../fonts/Geometria-Bold.otf') format('woff');
-	font-weight: bold;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic');
+
+
 
 //settings-var
 @import "util/settings";

@@ -63,7 +63,6 @@
 		padding: 2rem;
 	}
 	@include container;
-	border-bottom: solid 1px ac(lightgray);
 	&-items {
 		display: flex;
 		flex-flow: row wrap;
@@ -78,7 +77,6 @@
 //-----------
 #site-main .about {
 	@include container;
-	border-bottom: solid 1px ac(lightgray);
 	& header {
 		padding: 0 2rem;
 		& a {
@@ -113,7 +111,6 @@
 //-----------
 #site-main .news {
 	@include container;
-	border-bottom: solid 1px ac(lightgray);
 	& header {
 		padding: 0 2rem;
 		& a {
@@ -166,11 +163,15 @@
 
 	& article {
 		@include container($max-width: 128rem);
+		& p>img {
+			display: block;
+			margin: 2rem auto;
+		}
 	}
 }
 
 article {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	line-height: 2;
 }
 
@@ -252,7 +253,6 @@ article {
 		display: flex;
 		flex-flow: row wrap;		
 		justify-content: flex-start;
-		border-bottom: solid 1px ac(lightgray);
 	}
 	&-options {
 		@include container();
@@ -316,7 +316,6 @@ article {
 		display: flex;
 		flex-flow: row wrap;		
 		justify-content: space-between;
-		border-bottom: solid 1px ac(lightgray);
 	}
 	&-example {
 		@include container();
@@ -381,5 +380,9 @@ article {
 
 	& article {
 		@include container($max-width: 90rem);
+		& p>img {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 }
